@@ -1,0 +1,21 @@
+form{
+    margin: 3rem auto;
+    max-width: 300px;
+    text-align: center;
+    background-color: rgb(0, 54, 0);
+    padding: 3rem;
+    color: white;
+    border: none;
+}
+input{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+button{
+    margin-top: 2rem;
+    padding: 1rem;
+    border: none;
+    background-color: lightblue;
+}
