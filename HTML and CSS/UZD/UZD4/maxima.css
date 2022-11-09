@@ -1,0 +1,57 @@
+body{
+    background-color: lightgrey;
+    margin-right: 30%;
+    margin-left: 30%;   
+}
+#logo{
+    background-color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.links{
+    text-decoration: none;
+    padding-bottom: 12px;
+}
+a {
+    padding: 10px;
+}
+#ApieMus{
+    word-spacing: 1px;
+}
+#Produktai{
+    word-spacing: 5px;
+}
+.page1{
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.page1 p{
+    text-align: left;
+}
+.page2{
+    text-align: center;
+    background-color: white;
+    margin-top: 15px;
+    padding: 20px;
+    
+
+}
+.page2 img{
+    height: 200px;
+    width: 200px;
+}
+.page3{
+    background-color: white;
+}
+.page3 img{
+   width: 700px;
+   padding: 20px;
+}
+.page3 ul{
+    padding-top: 30px;
+}
+footer{
+    text-align: center;
+}

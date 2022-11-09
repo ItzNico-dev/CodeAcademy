@@ -1,0 +1,39 @@
+body {
+    background: linear-gradient(to right, blue, green);
+    text-align: center;
+}
+
+.first img{
+    width: 500px;
+    height: 350px;
+    border: 4px solid white;
+    padding: 1em;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.second {
+    width: 500px;
+    height: 180px;
+    box-sizing: border-box;
+    background-image: url("https://th.bing.com/th/id/OIP.WDPIMY5fykVRrp85zvEJqgHaEo?pid=ImgDet&rs=1");
+    background-position: center;
+    background-size: 100%;
+    color: white;
+    border: 4px solid  white;
+    padding: 0 1em;
+    margin: 1.5em auto;
+}
+
+.third {
+    width: 550px;
+    height: 162px;
+    box-sizing: border-box;
+    background-image: url("https://th.bing.com/th/id/OIP.WDPIMY5fykVRrp85zvEJqgHaEo?pid=ImgDet&rs=1");
+    background-position: center;
+    background-size: 100%;
+    color: white;
+    border: 4px solid  white;
+    margin: 1.5em auto;
+    padding: 0 1em;
+}

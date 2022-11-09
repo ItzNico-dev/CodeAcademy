@@ -1,0 +1,13 @@
+body{
+background: linear-gradient(rgb(48, 150, 96), blue);
+height: 100vh;
+
+}
+
+img{
+    width: 300px;
+    box-shadow: 10px 5px 3px rgb(106, 78, 78);
+}
+.center-text{
+    text-align: center;
+}

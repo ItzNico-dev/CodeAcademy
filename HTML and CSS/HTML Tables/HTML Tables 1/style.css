@@ -1,0 +1,32 @@
+table{
+    /* border-spacing: 0; */
+    border-collapse: collapse;
+}
+th {
+    /* column-span: 2; */
+    /* rowspan="2" */
+    /* width: 60px; */
+}
+th, td{
+    border: 2px solid black;
+    padding: 4px;
+    text-align: left;
+}
+#orange{
+    background-color: orange;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+.FontColorWhite{
+    color: white;
+}
+.column1{
+    font-weight: bold;
+}
+.platesnis{
+    width: 50px;
+}

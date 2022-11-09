@@ -1,0 +1,50 @@
+#img {
+    text-align: center;
+}
+.links{
+    font-size: 25px;
+    color: white;
+    background-color: rgb(0, 85, 0);
+    text-align: center;
+    word-spacing: 50px;
+    line-height: 50px;
+  
+}
+.content{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgb(243, 243, 243);
+}
+#MSBackground{
+width: 98%;
+height: 100%;
+ text-align: center;
+ margin-left: 5px;
+}
+
+.about h2{
+    margin: 20px;
+    background-color: rgb(37, 102, 37);
+    color: white;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.about p {
+    margin: 20px;
+}
+.contacts{
+    background-color: rgb(211, 244, 211);
+    
+}
+.contacts h2{
+    margin: 20px;
+    background-color: rgb(37, 102, 37);
+    color: white;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.contacts p {
+    margin: 20px;
+}

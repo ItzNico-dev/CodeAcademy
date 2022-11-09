@@ -1,0 +1,23 @@
+body{
+    background: linear-gradient(rgb(255, 0, 0),rgb(0, 0, 0));
+    height: 100vh;
+}
+header{
+    font-weight: bold;
+    text-align: center;
+}
+#links{
+   
+}
+#picture-Marley{
+    text-align: center;
+}
+
+#story {
+    text-align: center;
+    font-style: italic;
+    border: dotted;
+    border-color: black;
+    border-radius: 20%;
+    border-width: 7px;
+}

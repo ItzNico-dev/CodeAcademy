@@ -1,0 +1,15 @@
+.flexcontainer{
+    display: flex;
+    border: 5px solid black;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.flexitem{
+    background-color: red;
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+}

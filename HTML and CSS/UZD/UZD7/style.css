@@ -1,0 +1,183 @@
+body {
+  font-family: Open Sans, sans-serif;
+}
+
+menu {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.window {
+  margin: auto;
+  border-radius: 5px;
+  background: white;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px black;
+}
+
+.window .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: linear-gradient(black,grey ) no-repeat;
+  transition-duration: 0.3s;
+  color: red;;
+  font-style: italic;
+  border: red 5px dashed;
+}
+
+.separator {
+  border-top: 2px solid red;
+  border-bottom: 1px solid red;
+  margin: 20px;
+}
+
+.sidebarname {
+  padding-left: 25px;
+}
+
+.window .sidebar .menu a {
+  color: red;
+  text-decoration: wavy;
+}
+
+.menu-name {
+  text-transform: uppercase;
+  padding: 0 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.no-bullets {
+  list-style-type: square;
+}
+
+.window .sidebar .menu > ul > li {
+  list-style: none;
+}
+
+.window .sidebar .menu > ul > li > a {
+  position: relative;
+  font-size: 20px;
+  padding: 10px 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.window .sidebar .menu > ul > li.active {
+  list-style-type: disc;
+  color: red;
+  padding-bottom: 10px;
+}
+
+.window .sidebar .menu > ul > li.active > a {
+  padding-bottom: 0;
+}
+
+.window .sidebar .menu > ul > li.active ul {
+  display: block;
+  margin-top: 5px;
+}
+
+.window .sidebar .menu > ul > li.active ul li.active a {
+  color: white;;
+  font-weight: bold;
+}
+
+.window .sidebar .menu > ul > li.active ul li a {
+  padding: 5px;
+  display: block;
+  font-size: 13px;
+  color: grey;
+}
+
+.window .sidebar .menu > ul > li ul {
+  display: none;
+}
+
+.window .main {
+  margin-left: 250px;
+  position: relative;
+  border: red 5px dashed;;
+}
+
+.title-bar {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.grey {
+  color: grey;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.left p {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.window .main .movie-list .title-bar .right {
+  float: right;
+}
+
+.window .main .movie-list .title-bar .right a {
+  color: grey;
+  margin-left: 10px;
+}
+
+.window .main .movie-list .title-bar .right a.blue {
+  color: blue;
+}
+
+.window .main .movie-list .list {
+  list-style-type: none;
+}
+
+.window .main .movie-list .list li {
+  padding-bottom: 30px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.window .main .movie-list .list li .title {
+  font-weight: bold;
+  color: green;;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-style: oblique;
+  position: relative;
+  top: -20px;
+  left: -20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align: center;;
+}
+
+.window .main .movie-list .list li .genre {
+  color: purple;;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-shadow: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}

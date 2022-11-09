@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <form action="#">
+        <h1>Payment form</h1>
+        <p>Required field are followed by *.</p>
+        <h1>Contact information</h1>
+        <fieldset>
+          <legend>Title</legend>
+          <input type="radio" />
+          <label for="Mr">Mr</label>
+          <input type="radio" />
+          <label for="Mrs">Mrs</label>
+        </fieldset>
+        <fieldset id="mainset">
+          <label for="name">Name</label>
+          <input type="text" id="name" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </fieldset>
+        <h1>Payment information</h1>
+        <fieldset>
+            <label for="card"> Card type</label>
+          <select name="card" id="card">
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+          </select>
+          <label for="cardnumber">Card Number</label>
+          <input type="number" id="cardnumber"/>
+          <label for="expirationdate">Expiration Date*</label>
+          <input type="date" id="expirationdate" />
+          <button type="submit">Validate the payment</button>
+      </form>
+    </main>
+  </body>
+</html>

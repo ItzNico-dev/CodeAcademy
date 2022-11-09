@@ -1,0 +1,30 @@
+h2{
+
+    color: violet;
+}
+h3, h4{
+
+    color: pink;
+    font;
+}
+#paragrafas {
+
+    font-size: small;
+}
+
+.MyClass {
+
+    font-size: 50px;
+}
+#Paragrafas2 {
+
+    color: yellow;
+    font-style: italic;
+    font-size: 100px;
+}
+.MyClass2 {
+
+    font-size: 60px;
+    font-style: italic;
+    color: rgb(55, 35, 10);
+}

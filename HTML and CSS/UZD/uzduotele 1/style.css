@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(83, 1, 83);
+    text-align: center;
+    color: rgb(137, 51, 20);
+}
+div{
+    background-color: rgb(62, 4, 62);
+    margin: 5% 30%;
+    border: 3px dotted rgb(84, 56, 4);
+    padding: 2%;
+}
+h1{
+    color: orange;
+    text-transform: uppercase;
+}
+h2{
+    text-transform: capitalize;
+}
+p{
+    text-align: justify;
+    letter-spacing: 2px;
+}
+span{
+    font-size: 50px;
+    padding-right: 10px;
+}
+img{
+    width: 85%;
+    border-top: 25px solid white;
+    border-left: 25px solid green;
+    border-right: 25px solid blue;
+    border-bottom: 25px solid black;
+    border-radius: 60px;
+
+
+
+
+    margin-top: 50px;
+}

@@ -1,0 +1,34 @@
+#name{
+
+    font-style: italic;
+    text-align: center;
+}
+#headline{
+    color: purple;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-align: center;
+    font-style: italic;
+}
+#about {
+
+    text-align: center;
+    font-size: larger;
+    font-style: italic;
+
+}
+#MD{
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+}
+#links{
+    width: 150px;
+    border: 5px dotted black;
+    text-align: :left;
+}
+.table{
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+}

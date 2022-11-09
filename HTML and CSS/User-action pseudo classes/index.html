@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User action pseudo classes</title>
+  </head>
+  <body>
+    <header>
+      <a href="#56">Nuoroda</a>
+    </header>
+    <main>
+      <form action="">
+        <legend>Apklausos forma</legend>
+        <fieldset>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required autofocus />
+          <label for="last-name">last name</label>
+          <input type="text" name="last-name" id="last-name" disabled />
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" min="18" max="99" />
+          <label for="ID"> ID</label>
+          <input type="text" name="id" id="id" readonly value="123456789" />
+        </fieldset>
+        <fieldset>
+          <legend>Megstamiausias gerimas</legend>
+          <input type="radio" name="drink" id=" coffee" value="coffee" />
+          <label for="coffee"> Coffee</label>
+          <input type="radio" name="drink" id=" tea" value="coffee" />
+          <label for="tea"> Tea</label>
+          <input type="radio" name="drink" id=" beer" value="beer" />
+          <label for="beer"> Beer</label>
+          <input type="radio" name="drink" id=" other" value="other" />
+          <label for="other"> Other</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
