@@ -13,10 +13,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(108, 170, 15);
+    background-color: #b8cb21;
+    padding: 0 10px;
 }
 header img{
     height: 70px;
+    background-color: ;
 }
 nav a{
     color: black;
@@ -26,14 +28,24 @@ nav a{
 main {
     background-color: #fff;
     display: flex;
+    padding: 20px;
+    text-align: right;
 }
+section:first-child {
+    flex: 2;
+  }
+  
+  section:last-child {
+    flex: 3;
+    margin-left: 20px;
+  }
 section{
     text-align: justify;
     text-align: left ;
 }
 section img{
     float: left;
-    width: 50%;
+    width: 25%;
 }
 section a{
     float: right;
