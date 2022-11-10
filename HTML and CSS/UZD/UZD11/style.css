@@ -41,7 +41,7 @@ section a{
     padding-right: 15px;
 }
 section:first-child{
-    flex: 2;
+    flex: 1;
 }
 flex:last-child{
     flex: 2;
