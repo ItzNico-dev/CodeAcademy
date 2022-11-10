@@ -1,0 +1,48 @@
+body{
+    background-image: url(https://th.bing.com/th/id/R.892bb645c09c766efcc5bc4d0c93094a?rik=slmcvUaa5yToAw&riu=http%3a%2f%2fwww.wallpapers13.com%2fwp-content%2fuploads%2f2015%2f12%2fNature-Lake-Bled.-Desktop-background-image.jpg&ehk=c2raFC95S12P3OL0%2fwdM60ro3oUxsSEajkuGEN%2fsjbo%3d&risl=1&pid=ImgRaw&r=0);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: greenyellow;
+}
+header img{
+    height: 70px;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    padding-right: 10px;
+}
+main {
+    background-color: #fff;
+    display: flex;
+}
+section{
+    text-align: justify;
+    text-align: ;
+}
+section img{
+    float: left;
+    width: 50%;
+}
+section a{
+    float: right;
+    text-decoration: none;
+    color: white;
+    background-color: greenyellow;
+    padding-right: 15px;
+}
+section:first-child{
+    flex: 2;
+}
+flex:last-child{
+    flex: 2;
+}
