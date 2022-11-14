@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    border: 2px solid black;
+    grid-gap: 1rem;
+    align-items: center;
+        justify-content: center;
+}
+.class{
+    background-color: red;
+}
