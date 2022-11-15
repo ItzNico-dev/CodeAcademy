@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: grey;
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 150px;
+}
+header h1{
+    align-self: center;
+}
+.bar{
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 60px;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 10px;
+}
+a{
+    background-color: #fff;
+    text-decoration: none;
+    color: blue;
+
+}
