@@ -2,14 +2,39 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="style-large.css"
+      media="screen and (min-width: 1024px)"
+    />
+
+    <link
+      rel="stylesheet"
+      href="style-small.css"
+      media="screen and (max-width: 600px)"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Respomsive Web Design</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <section class="container">
+      <div class="cell">1</div>
+      <div class="cell">2</div>
+      <div class="cell">3</div>
+      <div class="cell">4</div>
+    </section>
+    <section class="fluid-container">
+      <div class="fluid">fluid</div>
+      <div class="fluid">fluid</div>
+    </section>
+    <section>
+      <picture>
+        <source media="(min-width: 600px)" srcset="tree.jpeg" />
+
+        <img src="tree-small.jpeg" alt="Tree image" />
+      </picture>
+    </section>
   </body>
 </html>
