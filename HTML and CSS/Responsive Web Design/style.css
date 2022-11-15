@@ -8,6 +8,7 @@ border: 1px solid crimson;
 display: flex;
 gap: 1rem;
 margin-top: 2rem;
+margin-left: 2rem;
 }
 
 .cell, .fluid {
@@ -36,4 +37,5 @@ img {
     max-width: 750px;
     margin-top: 1rem;
     border-radius: 20px;
+    margin-left: 2rem;
 }
