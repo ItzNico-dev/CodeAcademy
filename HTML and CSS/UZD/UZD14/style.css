@@ -1,29 +1,30 @@
-*{
+.wrapper{
+    background-color: grey;
     box-sizing: border-box;
     margin: 0;
-    background-color: grey;
 }
 header{
+    background-color: #fff;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 15%;
-    margin-right: 15%;
-    height: 150px;
+    margin: 0 20% 0 20%;
+    align-items: center;;
 }
-header h1{
-    align-self: center;
+header img{
+    width: 150px;
+    border-radius: 20px;
 }
-.bar{
+main{
     display: flex;
-    margin-left: 15%;
-    margin-right: 15%;
-    height: 60px;
+    margin: 20px 20% 0 20%;
+    background-color: #fff;
+    height: 3rem;
     align-items: center;
-    background-color: #fff;
-    padding-left: 10px;
 }
-a{
-    background-color: #fff;
+.navbar a{
     text-decoration: none;
-    color: blue;
+    color: black;
+    padding: 0 10px 0 10px;
+}
+.navbar a:hover{
+    text-decoration: underline;
 }
