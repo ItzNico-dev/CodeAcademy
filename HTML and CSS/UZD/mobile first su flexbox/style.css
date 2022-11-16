@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container > div{
+    min-height: 30vh;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.flex-item-1{
+    background-color: red;
+    margin: 5px;
+}
+.flex-subitem-1{
+    background-color: red;
+    margin: 5px;
+}
+.flex-subitem-2{
+    background-color: red;
+    margin: 5px;
+}
+@media screen and (min-width: 768px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .flex-item-1{
+        width: 100vw;
+    }
+    .flex-item-2{
+        width: 50vw;
+    }
+    .flex-item-3{
+        width: 15%;
+    }
+    .flex-item-4{
+        width: 15%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .container > div{
+        flex: 1;
+    }
+    .flex-item-2 > div{
+        min-height: 15vh;
+    }
+    .felx-subitem-2{
+        display: flex;
+        flex-direction: row;
+    }
+    .felx-subitem-2 > div{
+        flex: 1;
+    }
+}
