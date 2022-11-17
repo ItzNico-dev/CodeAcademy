@@ -1,0 +1,35 @@
+@keyframes changecolor {
+    0%{
+        background-color: red;
+    }
+    30%{
+        background-color: aqua;
+    }
+    50%{
+        height: 300px;
+    }
+    80% {
+        width: 400px;
+    }
+    100%{
+        width: 200px;
+    }
+}
+div{
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    animation: infinite linear;
+    animation-name: changecolor;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+}
+
+/* div{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    transition: width 2s, height 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
