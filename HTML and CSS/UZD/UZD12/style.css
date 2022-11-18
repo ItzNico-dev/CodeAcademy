@@ -112,8 +112,8 @@ span{
 .item6:nth-child(5){
     align-self: center;
 }
-.item6 button{
-    width: 460px;
+.container-6 button{
+    width: 421px;
 }
 .item6:last-child{
     align-self: center;
