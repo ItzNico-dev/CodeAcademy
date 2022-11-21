@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+article, aside, header, footer, section {
+    min-height: 20vh;
+    line-height: 20vh;
+    border: 1px solid black;
+    text-align: center;
+    background-color: crimson;
+}
+
+.first-section {
+    display: flex;
+}
+
+.first-section article {
+    flex-grow: 2;
+}
+
+.first-section aside{
+    flex-grow: 1;
+}

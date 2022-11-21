@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div { 
+    min-height: 20vh;
+    line-height: 20vh;
+    border: 1px solid black;
+    background-color: crimson;
+    text-align: center;
+}
+
+.first-section {
+    display: flex;
+}
+
+.first-section div:first{
+    flex-grow: 2;
+}
+
+.first-section div:last-child{
+    flex-grow: 1;
+}
