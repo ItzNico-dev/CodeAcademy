@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    font-size: 20px;
+}
+header span{
+    color: blue;
+}
+.socials a{
+    padding-right: 0.5rem;
+}
+.page1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    /* height: 190vh;  */
+    text-align: center;
+    color: white;
+}
+.page1 p{
+    padding-top: 2rem;
+}
+.page1 h1{
+    font-size: 75px;
+}
+.page1 p{
+    font-size: 22px;
+    line-height: 40px;
+}
+.page1 button{
+    font-size: 25px;
+    background-color: blue;
+    border: 1px solid grey;
+    color:  white;
+    margin-top: 35px;
+}
