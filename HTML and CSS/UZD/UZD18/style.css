@@ -7,16 +7,15 @@ body {
     max-width: 90%;
     margin: 0 auto;
 }
-
+span{
+    color: blue;
+}
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 15vh;
     font-size: 20px;
-}
-header span{
-    color: blue;
 }
 .socials a{
     padding-right: 0.5rem;
@@ -47,4 +46,35 @@ header span{
     border: 1px solid grey;
     color:  white;
     margin-top: 35px;
+}
+.page2 {
+    width: 80%;
+    margin: 0 auto;
+}
+.page2 h1{
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 45px;
+    word-spacing: 1rem;
+}
+
+.page2 img{
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+}
+.page2 p, .explore{
+    padding-bottom: 25px;
+    text-align: left;
+}
+.page3{
+    background-color: lightgrey;
+}
+.page3 h1{
+    text-align: center;
+    font-size: 45px;
+}
+.icon-1-2{
+    display: flex;
+    text-align: center;
 }
