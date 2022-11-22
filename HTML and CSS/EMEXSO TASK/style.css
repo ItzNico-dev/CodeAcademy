@@ -1,22 +1,87 @@
-  :root {
+:root {
 
-    --brand-main-color: #f56347;
-  
-    --main-background-color: #fbd7b5;
-  
-    --main-font-color: #0c2461;
-  
-    --paragraph-font-color: #778791;
-  
-  }
-
-
+  --brand-main-color: #f56347;
+  --main-background-color: #fbd7b5;
+  --main-font-color: #0c2461;
+  --paragraph-font-color: #778791;
+}
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
   font-family: "roboto", "sans-serif";
+  text-align: center;
+  color: darkblue;;
+}
+
+.container-wrapper{
+max-width: 80%;
+margin: 0 auto;
+}
+
+header{
+  color: orange;
+}
+
+.header i{
+  color: orange;
+  margin-right: 0.5rem;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border-bottom: 1ps solid black;
+  margin-bottom: 1rem;
+}
+
+.soceals i {
+  border: 1ps solid orange;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+main{
+  background-color: rgb(255, 212, 133);
+}
+
+.main-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-content{
+  margin: 10vh;
+}
+
+h3{
+  color: orange;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.offer-content p{
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+button {
+  background-color: orange;
+  border: none;
+  border-radius: 6%;
+  padding: 0.5rem 1.5rem;
+  color: white;
+}
+.offer-content button::after{
+  content: "\2192";
+}
+
+.offer-image img{
+  max-width: 40vh;
 }
