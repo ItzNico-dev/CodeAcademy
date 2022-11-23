@@ -69,6 +69,8 @@ header {
 }
 .page3{
     background-color: lightgrey;
+    height:  120vh;
+    padding-top: 30vh;
 }
 .page3 h1{
     text-align: center;
@@ -76,5 +78,15 @@ header {
 }
 .icon-1-2{
     display: flex;
+    text-align: center;
+}
+.page3 i {
+    border: 5px solid blue;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+.item3 {
+    margin-top: 40px;
+    width: 50%;
     text-align: center;
 }
