@@ -26,7 +26,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: blue;
-    /* height: 190vh;  */
+    /height: 190vh;
     text-align: center;
     color: white;
 }
@@ -52,7 +52,7 @@ header {
     margin: 0 auto;
 }
 .page2 h1{
-    text-align: center;
+    text-align: left;
     margin-top: 3rem;
     font-size: 45px;
     word-spacing: 1rem;
@@ -201,6 +201,7 @@ header {
     margin: 0;
     padding: 0;
     border-bottom: 10px solid blue;
+    outline: 0;
 }
 .page6{
     width: 90%;
@@ -253,4 +254,12 @@ button{
 text-decoration: none;
 color: white;
 padding-right: 5px;
+}
+header nav{
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    
 }
