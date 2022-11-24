@@ -90,3 +90,167 @@ header {
     width: 50%;
     text-align: center;
 }
+.page4{
+    width: 80%;
+    margin: 0 auto;
+}
+.page4 h1{
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    font-size: 60px;
+    word-spacing: 15px;
+}
+.tour-1 h2{
+    background-color: rgb(111, 111, 255);
+    width: fit-content;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    position: relative;
+    top:65px;
+}
+.tour-1 img{
+    width: 100%;
+}
+.tour-1 h3{
+    font-size: 2rem;
+    padding: 1rem 0.5rem ;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tour-2 h2{
+    background-color: rgb(111, 111, 255);
+    width: fit-content;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    position: relative;
+    top:65px;
+}
+.tour-2 img{
+    width: 100%;
+}
+.tour-2 h3{
+    font-size: 2rem;
+    padding: 1rem 0.5rem ;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tour-3 h2{
+    background-color: rgb(111, 111, 255);
+    width: fit-content;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    position: relative;
+    top:65px;
+}
+.tour-3 img{
+    width: 100%;
+}
+.tour-3 h3{
+    font-size: 2rem;
+    padding: 1rem 0.5rem ;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.tour-4 h2{
+    background-color: rgb(111, 111, 255);
+    width: fit-content;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    position: relative;
+    top:65px;
+}
+.tour-4 img{
+    width: 100%;
+}
+.tour-4 h3{
+    font-size: 2rem;
+    padding: 1rem 0.5rem ;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
+.all{
+    margin-top: 6rem;
+    text-align: center;
+    color: blue;
+}
+.page5{
+    width: 90%;
+    margin: 0 auto;
+}
+.page5 h1{
+    text-align: center;
+}
+.images img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 10px solid blue;
+}
+.page6{
+    width: 90%;
+    background-color: blue;
+    margin: 0 auto;
+    color: white;
+}
+.subscription{
+    display: flex;
+    flex-direction: columns;
+    align-items: center;
+    justify-content: center;
+}
+.c-1{
+    width: 50%;
+    line-height: 3rem;
+}
+.c-2{
+    width: 50%;
+}
+input{
+    height: 40px;
+    width: 250px;
+}
+button{
+    height: 40px;
+}
+.c-1 p{
+    font-size: 25px;
+    padding-left: 40px ;
+}
+.c-1 h1{
+    font-size: 50px;
+    text-align: center;
+    padding-left: 40px;
+}
+.page7{
+    text-align: center;
+    line-height: 4rem;
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+.socials{
+    color: blue;
+    word-spacing: 10px;
+}
+.links a{
+text-decoration: none;
+color: white;
+padding-right: 5px;
+}
