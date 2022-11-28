@@ -1,0 +1,85 @@
+@import "./variables";
+
+// main {
+//   background-color: greenyellow;
+//   max-width: $containerMaxWidth;
+//   margin: $containerMargin;
+// }
+
+// main button {
+//   background-color: $buttonColor;
+// }
+
+// footer {
+//   background-color: aqua;
+//   max-width: $containerMaxWidth;
+//   margin: $containerMargin;
+// }
+
+// footer button {
+//   background-color: $buttonColor;
+// }
+
+@mixin centerContainer($backgroundColor) {
+  max-width: $containerMaxWidth;
+  margin: $containerMargin;
+  background-color: $backgroundColor;
+}
+
+main {
+  @include centerContainer(greenyellow);
+
+  button {
+    background-color: $buttonColor;
+  }
+}
+
+footer {
+  @extend main;
+  background-color: aqua;
+}
+
+nav {
+  max-width: $containerMaxWidth / 2;
+  margin: $containerMargin;
+  background-color: orange;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-decoration: none;
+        padding: 1rem;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  @if $headingFontSize > 20px {
+    color: red;
+  } @else if $headingFontSize == 20px {
+    color: blue;
+  } @else {
+    color: green;
+  }
+}
+
+p {
+  text-align: justify;
+}
+
+@for $i from 1 through 10 {
+  .p#{$i} {
+    margin-left: 2rem * $i;
+  }
+}

@@ -26,7 +26,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: blue;
-    /height: 190vh;
+    height: 190vh;
     text-align: center;
     color: white;
 }
@@ -94,6 +94,10 @@ header {
     width: 80%;
     margin: 0 auto;
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
 .page4 h1{
     text-align: center;
     margin-top: 7rem;
@@ -101,17 +105,18 @@ header {
     font-size: 60px;
     word-spacing: 15px;
 }
-.tour-1 h2{
+
+.tour h2{
     background-color: rgb(111, 111, 255);
     width: fit-content;
     padding: 0.5rem 0.3rem 0.5rem 0.3rem;
     position: relative;
     top:65px;
 }
-.tour-1 img{
+.tour img{
     width: 100%;
 }
-.tour-1 h3{
+.tour h3{
     font-size: 2rem;
     padding: 1rem 0.5rem ;
 }
@@ -121,60 +126,6 @@ header {
 }
 
 
-.tour-2 h2{
-    background-color: rgb(111, 111, 255);
-    width: fit-content;
-    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
-    position: relative;
-    top:65px;
-}
-.tour-2 img{
-    width: 100%;
-}
-.tour-2 h3{
-    font-size: 2rem;
-    padding: 1rem 0.5rem ;
-}
-.description{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.tour-3 h2{
-    background-color: rgb(111, 111, 255);
-    width: fit-content;
-    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
-    position: relative;
-    top:65px;
-}
-.tour-3 img{
-    width: 100%;
-}
-.tour-3 h3{
-    font-size: 2rem;
-    padding: 1rem 0.5rem ;
-}
-.description{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.tour-4 h2{
-    background-color: rgb(111, 111, 255);
-    width: fit-content;
-    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
-    position: relative;
-    top:65px;
-}
-.tour-4 img{
-    width: 100%;
-}
-.tour-4 h3{
-    font-size: 2rem;
-    padding: 1rem 0.5rem ;
-}
 .description{
     display: flex;
     justify-content: space-between;
@@ -258,8 +209,65 @@ padding-right: 5px;
 header nav{
     display: none;
 }
+header nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-@media screen and (min-width: 1200px) {
-
-    
+@media screen and (min-width: 900px) {
+    header nav{
+        display: flex;
+        gap: 10px;
+    }
+    .page1{
+        height: 80rem;
+        background-image: url(https://th.bing.com/th/id/OIP.getiGy5fahH_LFUsefjRmgHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7) ;
+    }
+    .page2{
+        display: grid;
+        grid-template-columns: repeat(2,5fr);
+    }
+    .page2 h1 {
+        grid-column: span 2;
+        text-align: center;
+    }
+    .page2 img{
+        grid-column: 1;
+        grid-row: 2/6;
+        border: 5px solid blue;
+        width: 70%;
+        margin-bottom: 50px;
+        position: relative;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .page2 .explore{
+        grid-column: 2;
+        padding: 0;
+    }
+    .page3{
+        padding:50px;
+        display: grid;
+        grid-template-columns: 1;
+        height: 400px;
+    }
+    .page3 i{
+        float: left;
+        text-align: left;
+    }
+    .page3 h1{
+        grid-column: span 2;
+        height: 100px;
+    }
+    .page3 div{
+    margin-left: 70px;
+    margin-top: 0;       
+    }
+    .wrapper{
+        flex-flow: row wrap;
+    }
+    .tour{
+        flex: 0 0 33%;
+    }
 }
