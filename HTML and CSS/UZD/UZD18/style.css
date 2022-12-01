@@ -1,273 +1,269 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    max-width: 90%;
-    margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto;
 }
-span{
-    color: blue;
+span {
+  color: blue;
 }
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 15vh;
-    font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  font-size: 20px;
 }
-.socials a{
-    padding-right: 0.5rem;
+.socials a {
+  padding-right: 0.5rem;
 }
-.page1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: blue;
-    height: 190vh;
-    text-align: center;
-    color: white;
+.page1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  height: 190vh;
+  text-align: center;
+  color: white;
 }
-.page1 p{
-    padding-top: 2rem;
+.page1 p {
+  padding-top: 2rem;
 }
-.page1 h1{
-    font-size: 75px;
+.page1 h1 {
+  font-size: 75px;
 }
-.page1 p{
-    font-size: 22px;
-    line-height: 40px;
+.page1 p {
+  font-size: 22px;
+  line-height: 40px;
 }
-.page1 button{
-    font-size: 25px;
-    background-color: blue;
-    border: 1px solid grey;
-    color:  white;
-    margin-top: 35px;
+.page1 button {
+  font-size: 25px;
+  background-color: blue;
+  border: 1px solid grey;
+  color: white;
+  margin-top: 35px;
 }
 .page2 {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
-.page2 h1{
-    text-align: left;
-    margin-top: 3rem;
-    font-size: 45px;
-    word-spacing: 1rem;
+.page2 h1 {
+  text-align: left;
+  margin-top: 3rem;
+  font-size: 45px;
+  word-spacing: 1rem;
 }
 
-.page2 img{
-    width: 100%;
-    text-align: center;
-    margin-top: 4rem;
+.page2 img {
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
 }
-.page2 p, .explore{
-    padding-bottom: 25px;
-    text-align: left;
+.page2 p,
+.explore {
+  padding-bottom: 25px;
+  text-align: left;
 }
-.page3{
-    background-color: lightgrey;
-    height:  120vh;
-    padding-top: 30vh;
+.page3 {
+  background-color: lightgrey;
+  height: 120vh;
+  padding-top: 30vh;
 }
-.page3 h1{
-    text-align: center;
-    font-size: 45px;
+.page3 h1 {
+  text-align: center;
+  font-size: 45px;
 }
-.icon-1-2{
-    display: flex;
-    text-align: center;
+.icon-1-2 {
+  display: flex;
+  text-align: center;
 }
 .page3 i {
-    border: 5px solid blue;
-    background-color: blue;
-    margin-bottom: 20px;
+  border: 5px solid blue;
+  background-color: blue;
+  margin-bottom: 20px;
 }
 .item3 {
-    margin-top: 40px;
-    width: 50%;
-    text-align: center;
+  margin-top: 40px;
+  width: 50%;
+  text-align: center;
 }
-.page4{
-    width: 80%;
-    margin: 0 auto;
+.page4 {
+  width: 80%;
+  margin: 0 auto;
 }
-.wrapper{
-    display: flex;
-    flex-direction: column;
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
-.page4 h1{
-    text-align: center;
-    margin-top: 7rem;
-    margin-bottom: 4rem;
-    font-size: 60px;
-    word-spacing: 15px;
-}
-
-.tour h2{
-    background-color: rgb(111, 111, 255);
-    width: fit-content;
-    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
-    position: relative;
-    top:65px;
-}
-.tour img{
-    width: 100%;
-}
-.tour h3{
-    font-size: 2rem;
-    padding: 1rem 0.5rem ;
-}
-.description{
-    display: flex;
-    justify-content: space-between;
+.page4 h1 {
+  text-align: center;
+  margin-top: 7rem;
+  margin-bottom: 4rem;
+  font-size: 60px;
+  word-spacing: 15px;
 }
 
+.tour h2 {
+  background-color: rgb(111, 111, 255);
+  width: fit-content;
+  padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+  position: relative;
+  top: 65px;
+}
+.tour img {
+  width: 100%;
+}
+.tour h3 {
+  font-size: 2rem;
+  padding: 1rem 0.5rem;
+}
 
-.description{
-    display: flex;
-    justify-content: space-between;
+.description {
+  display: flex;
+  justify-content: space-between;
 }
-.left{
-    display: flex;
-    justify-content: space-between;
-    width: 60px;
+.left {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
 }
-.all{
-    margin-top: 6rem;
-    text-align: center;
-    color: blue;
+.all {
+  margin-top: 6rem;
+  text-align: center;
+  color: blue;
 }
-.page5{
-    width: 90%;
-    margin: 0 auto;
+.page5 {
+  width: 90%;
+  margin: 0 auto;
 }
-.page5 h1{
-    text-align: center;
+.page5 h1 {
+  text-align: center;
 }
-.images img{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border-bottom: 10px solid blue;
-    outline: 0;
+.images img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 10px solid blue;
+  outline: 0;
 }
-.page6{
-    width: 90%;
-    background-color: blue;
-    margin: 0 auto;
-    color: white;
+.page6 {
+  width: 90%;
+  background-color: blue;
+  margin: 0 auto;
+  color: white;
 }
-.subscription{
-    display: flex;
-    flex-direction: columns;
-    align-items: center;
-    justify-content: center;
+.subscription {
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+  justify-content: center;
 }
-.c-1{
-    width: 50%;
-    line-height: 3rem;
+.c-1 {
+  width: 50%;
+  line-height: 3rem;
 }
-.c-2{
-    width: 50%;
+.c-2 {
+  width: 50%;
 }
-input{
-    height: 40px;
-    width: 250px;
+input {
+  height: 40px;
+  width: 250px;
 }
-button{
-    height: 40px;
+button {
+  height: 40px;
 }
-.c-1 p{
-    font-size: 25px;
-    padding-left: 40px ;
+.c-1 p {
+  font-size: 25px;
+  padding-left: 40px;
 }
-.c-1 h1{
-    font-size: 50px;
-    text-align: center;
-    padding-left: 40px;
+.c-1 h1 {
+  font-size: 50px;
+  text-align: center;
+  padding-left: 40px;
 }
-.page7{
-    text-align: center;
-    line-height: 4rem;
-    background-color: black;
-    color: white;
-    width: 90%;
-    margin: 0 auto;
+.page7 {
+  text-align: center;
+  line-height: 4rem;
+  background-color: black;
+  color: white;
+  width: 90%;
+  margin: 0 auto;
 }
-.socials{
-    color: blue;
-    word-spacing: 10px;
+.socials {
+  color: blue;
+  word-spacing: 10px;
 }
-.links a{
-text-decoration: none;
-color: white;
-padding-right: 5px;
+.links a {
+  text-decoration: none;
+  color: white;
+  padding-right: 5px;
 }
-header nav{
-    display: none;
+header nav {
+  display: none;
 }
-header nav a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+header nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 900px) {
-    header nav{
-        display: flex;
-        gap: 10px;
-    }
-    .page1{
-        height: 80rem;
-        background-image: url(https://th.bing.com/th/id/OIP.getiGy5fahH_LFUsefjRmgHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7) ;
-    }
-    .page2{
-        display: grid;
-        grid-template-columns: repeat(2,5fr);
-    }
-    .page2 h1 {
-        grid-column: span 2;
-        text-align: center;
-    }
-    .page2 img{
-        grid-column: 1;
-        grid-row: 2/6;
-        border: 5px solid blue;
-        width: 70%;
-        margin-bottom: 50px;
-        position: relative;
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-    .page2 .explore{
-        grid-column: 2;
-        padding: 0;
-    }
-    .page3{
-        padding:50px;
-        display: grid;
-        grid-template-columns: 1;
-        height: 400px;
-    }
-    .page3 i{
-        float: left;
-        text-align: left;
-    }
-    .page3 h1{
-        grid-column: span 2;
-        height: 100px;
-    }
-    .page3 div{
+  header nav {
+    display: flex;
+    gap: 10px;
+  }
+  .page1 {
+    height: 80rem;
+    background-image: url(https://th.bing.com/th/id/OIP.getiGy5fahH_LFUsefjRmgHaEK?w=333&h=187&c=7&r=0&o=5&pid=1.7);
+  }
+  .page2 {
+    display: grid;
+    grid-template-columns: repeat(2, 5fr);
+  }
+  .page2 h1 {
+    grid-column: span 2;
+    text-align: center;
+  }
+  .page2 img {
+    grid-column: 1;
+    grid-row: 2/6;
+    border: 5px solid blue;
+    width: 70%;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  .page2 .explore {
+    grid-column: 2;
+    padding: 0;
+  }
+  .page3 {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1;
+    height: 400px;
+  }
+  .page3 i {
+    float: left;
+    text-align: left;
+  }
+  .page3 h1 {
+    grid-column: span 2;
+    height: 100px;
+  }
+  .page3 div {
     margin-left: 70px;
-    margin-top: 0;       
-    }
-    .wrapper{
-        flex-flow: row wrap;
-    }
-    .tour{
-        flex: 0 0 33%;
-    }
+    margin-top: 0;
+  }
+  .wrapper {
+    flex-flow: row wrap;
+  }
+  .tour {
+    flex: 0 0 33%;
+  }
 }

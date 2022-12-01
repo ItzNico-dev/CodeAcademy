@@ -24,6 +24,10 @@ header nav a {
 .SignUp {
   color: red;
 }
+.titlepage {
+  width: 100%;
+  height: 600px;
+}
 
 .titlepage p span {
   text-transform: uppercase;
@@ -75,7 +79,7 @@ header nav a {
 }
 
 .companies {
-  margin: 2rem 4rem;
+  margin: 2rem auto;
   display: flex;
   justify-content: space-between;
 }
@@ -84,12 +88,69 @@ header nav a {
   font-size: 40px;
 }
 
-.auction p {
+.wrapper {
+  display: flex;
+
   margin: 0;
-  font-size: 20px;
 }
 
-.auction p a {
+.nft img {
+  margin: 0 auto;
+  width: 350px;
+}
+.description {
+  display: flex;
+  width: 350px;
+  margin: 0 auto;
+  background-color: lightgrey;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.left {
   margin: 0;
+  width: 50%;
+  line-height: 2rem;
+}
+
+.orange {
+  color: orange;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+.bold {
+  font-weight: bold;
+  color: black;
+}
+
+.left p {
+  margin: 0;
+}
+
+.grey {
+  color: rgb(146, 146, 146);
+}
+
+.right {
+  margin: 0;
+  width: 50%;
+  line-height: 2rem;
+}
+
+.right p {
+  margin: 0;
+  text-align: right;
+}
+
+.right img {
+  width: 11px;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.tour {
+  width: 370px;
+  height: 400px;
 }
 
