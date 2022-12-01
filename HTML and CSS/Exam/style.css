@@ -15,10 +15,17 @@ header {
   justify-content: space-between;
   padding: 3rem 4rem;
 }
+header img {
+  margin-left: 0;
+}
 
 header nav a {
   word-spacing: 15px;
   text-decoration: none;
+}
+
+.hamburger {
+  display: none;
 }
 
 .SignUp {
@@ -69,11 +76,12 @@ header nav a {
 }
 
 .info {
+  margin: 0;
   margin-top: 8rem;
   background-image: url(./assets/background.svg);
   padding: 10rem 2rem 0rem 2rem;
   font-size: 20px;
-  line-height: 1rem;
+  line-height: 2rem;
   padding-bottom: 1rem;
   width: 100%;
 }
@@ -84,13 +92,21 @@ header nav a {
   justify-content: space-between;
 }
 
+.auction {
+  margin-left: 0;
+}
+
 .auction h1 {
   font-size: 40px;
 }
 
+.auction p a {
+  color: black;
+  margin-left: 0;
+}
+
 .wrapper {
   display: flex;
-
   margin: 0;
 }
 
@@ -98,6 +114,7 @@ header nav a {
   margin: 0 auto;
   width: 350px;
 }
+
 .description {
   display: flex;
   width: 350px;
@@ -105,12 +122,6 @@ header nav a {
   background-color: lightgrey;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-}
-
-.left {
-  margin: 0;
-  width: 50%;
-  line-height: 2rem;
 }
 
 .orange {
@@ -122,6 +133,13 @@ header nav a {
 .bold {
   font-weight: bold;
   color: black;
+}
+
+.left {
+  margin: 0;
+  width: 50%;
+  line-height: 2rem;
+  padding-left: 20px;
 }
 
 .left p {
@@ -141,6 +159,7 @@ header nav a {
 .right p {
   margin: 0;
   text-align: right;
+  padding-right: 20px;
 }
 
 .right img {
@@ -149,34 +168,121 @@ header nav a {
   margin-right: 8px;
 }
 
-.tour {
-  width: 370px;
-  height: 400px;
+.page-bottom p span {
+  text-transform: uppercase;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
 }
 
-.footer-wrapper{
+.page-bottom h1 {
+  margin-top: 0;
+  margin-left: 1.5rem;
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 110px;
+  width: 620px;
+}
+
+.page-bottom button {
+  width: 125px;
+  height: 50px;
+  border-radius: 50px;
+  border-color: orangered;
+  border-width: 3px;
+  background-color: #fff;
+  margin-left: 1.5rem;
+}
+
+.page-bottom img {
+  width: 55%;
+  float: right;
+  height: 580px;
+}
+
+footer {
+  margin: 0;
+}
+
+.footer-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.footer-left i{
+.footer-left i {
   margin-right: 0;
   color: lightslategrey;
 }
 
-.footer-right{
+.footer-right {
   display: flex;
   line-height: 1px;
 }
 
-.header{
+.header {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.copyright{
+.copyright {
   display: flex;
   justify-content: space-between;
   color: lightgrey;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    margin: 0;
+    text-align: right;
+  }
+  .titlepage img {
+  }
+  .titlepage h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .info {
+    border-radius: 15px;
+  }
+  .companies {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #dissapear {
+    display: none;
+  }
+  .page-bottom img {
+    width: 35%;
+    float: right;
+    margin: 0;
+  }
+  .page-bottom h1 {
+    font-size: 50px;
+    word-spacing: 1px;
+    width: 70%;
+    line-height: 60px;
+  }
+  .page-bottom button {
+    width: 40%;
+    height: 70px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-right {
+    flex-wrap: wrap;
+  }
+  .footer-right div {
+    margin: 0 5rem 0 0;
+  }
+  .copyright p:last-child {
+    display: none;
+  }
 }
