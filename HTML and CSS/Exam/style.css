@@ -154,3 +154,29 @@ header nav a {
   height: 400px;
 }
 
+.footer-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-left i{
+  margin-right: 0;
+  color: lightslategrey;
+}
+
+.footer-right{
+  display: flex;
+  line-height: 1px;
+}
+
+.header{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.copyright{
+  display: flex;
+  justify-content: space-between;
+  color: lightgrey;
+}
