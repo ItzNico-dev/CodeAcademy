@@ -46,18 +46,20 @@
 
 //! switch
 
-const a = prompt("Enter a number");
+let a = 5 ;
 
 
 switch (a) {
-    case 0: console.log("Not a group");
+    case 0: console.log("Not a group")
         break;
-    case 1: console.log("Solo");
+    case 1: console.log("solo")
         break;
-    case 2: console.log("Duo");
+    case 2: console.log("duo")
         break;
-    case 3: console.log("Trio");
+    case 3: console.log("trio")
         break;
-    case 4: console.log("Quartet");
+    case 4: console.log("quartet")
         break;
+    case 5: console.log("Big group")
+        break;    
 }
