@@ -105,3 +105,30 @@ console.log(!!true) //negates twice into true
 //     console.log("no");
 
 // }
+
+//! ternary operator
+
+// const isItEvening = true;
+// isItEvening ? console.log("Evening") : console.log("not Evening");
+
+// let isUserAdult = confirm("Are you sure you are over 18?");
+// isUserAdult ? alert("Adult") : alert("notAdult");
+
+//! switch statement
+
+const weekDay = 3;
+
+switch (weekDay) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3: 
+        console.log("Wednesday");
+        break;
+    default: 
+        console.log("Not Known")
+        
+}
