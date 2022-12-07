@@ -53,3 +53,21 @@ if (strings[i] == "Matt") {
 console.log(strings[i]);
 }
 }
+
+const deliveryfee = 20 + "$";
+const price = prompt("price");
+const delivery = prompt("do you need delivery? yes/no");
+let city;
+
+if (delivery === "yes") {
+    city = prompt("Which city")
+}
+
+if (delivery !== "yes") {
+    console.log(`prekes kaina ${price}$ \nYou can get it delivered for free in Vilnius `) 
+} else if (price >= 50 || city === "Vilnius") {
+    console.log(`prekes kaina ${price} \ndelivery is free  to ${city} \nwe will deliver it in 1-3 days`);
+}
+else {
+    console.log(`price ${price}$ \ndelivery fee is ${deliveryfee} \ntotal ${+price + deliveryfee}$ \ngoods will be delivered to ${city} in 1-3 days` )
+    }
