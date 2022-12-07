@@ -35,10 +35,10 @@
 
 let car = prompt("Enter your car manufacturer");
 
-if (car == "VW" || car == "Audi" || car == "Bentley" || car == "Bugatti" || car == "Lambo" || car == "Porsche") {
-    console.log("Your car belongs to VW club");
-} else if (car == "BMW" || car == "Mini" || car == "Rolls-Royce") {
-    console.log("Your car belongs to BMW club");
-} else {
-    console.log("Your car belongs nether club");
-}
+    if (["VW", "Audi", "Bentley"].includes(car)) {
+        console.log("Your car belongs to VW club");
+    } else if (["BMW", "Mini", "Rolls-Royce"].includes(car)) {
+        console.log("Your car belongs to BMW club");
+    } else {
+        console.log("Your car belongs nether club");
+    }
