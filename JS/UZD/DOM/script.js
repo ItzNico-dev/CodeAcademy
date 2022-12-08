@@ -6,6 +6,8 @@ while (i < 5){
     i++
 }
 
+//math
+
 console.log(Math.cos(0))
 
 console.log(Math.floor(Math.random() * (5 - 1 + 1)) + 1) //1-5
@@ -17,6 +19,8 @@ if((Math.floor(Math.random() * (12 - 5 + 1)) + 5) == 6){
 } else{
     // alert('You lost')
 }
+
+//creating and switching elements around
 
 let h2 = document.createElement('h2')
 console.log(h2.innerHTML = 'matt')
