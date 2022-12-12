@@ -57,7 +57,8 @@
 //! task 6
 
 function generateRandomNumber() {
-    return  Math.floor(Math.random() * 10 + 1);
+    number = Math.floor(Math.random() * 10 + 1);
+    return number;
   }
   
   function squareNumber(number) {
