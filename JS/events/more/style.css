@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 500px;
+  padding: 1rem;
+  background-color: antiquewhite;
+  margin: 3rem auto;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+select {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 7px;
+  border: 2px solid lightgrey;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+#checkbox-label {
+  display: inline;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  border-radius: 7px;
+  background-color: coral;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 109, 56);
+}

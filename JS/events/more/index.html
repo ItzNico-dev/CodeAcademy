@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Form events</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="post">
+        <h1>Sign up</h1>
+        <div>
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter username"
+          />
+          <div class="error" id="usernameError"></div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email address"
+          />
+          <div class="error" id="emailError"></div>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter password"
+          />
+          <div class="error"></div>
+        </div>
+        <div>
+          <label for="hometown">Hometown</label>
+          <select name="hometown" id="hometown">
+            <option value="" disabled selected></option>
+            <option value="Vilnius">Vilnius</option>
+            <option value="Kaunas">Kaunas</option>
+            <option value="Klaipėda">Klaipėda</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="error"></div>
+        </div>
+        <div>
+          <label for="terms" id="checkbox-label">Terms and conditions</label>
+          <input type="checkbox" name="terms" id="terms" />
+          <div class="error"></div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
