@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+}
+
+.rectangle {
+  margin: 20px auto;
+  width: 400px;
+  height: 300px;
+  background-color: royalblue;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.red {
+  background-color: firebrick;
+  transition: 1s;
+}
+
+.green {
+  background-color: limegreen;
+  transition: 1s;
+}
