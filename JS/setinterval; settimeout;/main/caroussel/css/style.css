@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+* body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../images/concrete_seamless.png");
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav {
+  padding: 1rem;
+}
+
+.img-wrapper {
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.fade {
+  opacity: 0.2;
+}
+
+img {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  transition: opacity ease 2s;
+}
+
+h2 {
+  font-size: 4em;
+}
