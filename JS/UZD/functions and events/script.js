@@ -56,14 +56,15 @@
 
 //! task 6
 
-function generateRandomNumber() {
-    number = Math.floor(Math.random() * 10 + 1);
-    return number;
-  }
+// function generateRandomNumber() {
+//     number = Math.floor(Math.random() * 10 + 1);
+//     return number;
+//   }
   
-  function squareNumber(number) {
-    let sqrtNumber = Math.pow(number, 2)
-      console.log(sqrtNumber);
-  }
+//   function squareNumber(number) {
+//     let sqrtNumber = Math.pow(number, 2)
+//       console.log(sqrtNumber);
+//   }
   
-  squareNumber(generateRandomNumber());
+//   squareNumber(generateRandomNumber());
+
