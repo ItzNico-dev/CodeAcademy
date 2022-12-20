@@ -1,7 +1,5 @@
 body{
     background-color: lightgrey;
-    margin-right: 30%;
-    margin-left: 30%;   
 }
 #logo{
     background-color: white;
@@ -54,4 +52,7 @@ a {
 }
 footer{
     text-align: center;
+}
+main p{
+    font-weight: bold;
 }
