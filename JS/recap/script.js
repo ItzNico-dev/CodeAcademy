@@ -217,3 +217,98 @@ const obj = {
 // document.location.reload()
 // console.log(document.body)
 // console.log(document.forms)
+
+
+//! DOM manipulation //text manipulation
+
+
+//!creates element
+// const par = document.createElement('p')
+// par.textContent = 'my created paragraph'
+// console.log(par)
+
+
+//! creates and adds to html
+// const div = document.querySelector('div')
+// div.append(par)
+// console.log(div)
+
+// par.remove() //! removes the element
+
+
+// par.id = 'manoID2'
+// par.setAttribute('id', 'manoID')
+
+// par.getAttribute('manoID')
+
+//! pridejimas i elemento gala
+// const mainTag = document.querySelector('main')
+// const h2Tag = document.createElement('h2')
+// h2Tag.textContent = 'some kind of text'
+
+// const pTag1 = document.createElement('p')
+// pTag1.textContent = 'sahjdfbasyhudgvasuy'
+
+// const ulTag = document.createElement('ul')
+// const liTag = document.createElement('li')
+// liTag.textContent = 'ndsfcytucxnsajb'
+
+// const pTag2 = document.createElement('p')
+// pTag2.textContent = 'sahjdfbasyhudgvasuy'
+
+
+// ulTag.append(liTag)
+// mainTag.append(h2Tag, pTag1, ulTag, pTag2)
+
+//!prideda i prieki
+// const h1Tag = document.createElement('h1')
+// h1Tag.textContent = 'dnmasuiduiagd'
+// mainTag.prepend(h1Tag)
+
+//!kitas pridejimo metodas // priema tik viena elementa
+const h1Tag2 = document.createElement('h1')
+// h1Tag2.textContent = 'dnmasuiduiagd'
+
+// mainTag.appendChild(h1Tag2)
+
+//! taip pat append gali prideti paprasta string
+
+const mainTag = document.querySelector('main')
+
+const cityList = document.createElement('ul')
+
+const cityListItem1 = document.createElement('li')
+cityListItem1.textContent = 'kaunas'
+
+const cityListItem2 = document.createElement('li')
+cityListItem2.textContent = 'vilnius'
+
+const cityListItem3 = document.createElement('li')
+cityListItem3.textContent = 'klaipeda'
+
+cityList.append(cityListItem1, cityListItem2, cityListItem3)
+
+const cityInput = document.createElement('input')
+cityInput.type = 'text'
+cityInput.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter'){
+        // pasiimti is input miesta
+        const inputValue = e.target.value
+        //sukurti li elementa
+        const newCityElement = document.createElement('li')
+        //duoti list elementui text value
+        newCityElement.textContent = inputValue
+        //prideti nauja list element prie esancio ul
+        cityList.append(newCityElement)
+
+        //pasiimti visus jau ivestus miestus
+        //palyginti nauja meista su ivestais miestais
+        //jei miestas jau egzistuoja sukuriame paragraph kuriame parasyta, kad miestas 
+        // jau egzistuoja, o jei nera, tiesiog pridedame
+
+        //isvalyti langa
+        e.target.value = ' '
+    }
+})
+mainTag.append(cityList, cityInput)
+
