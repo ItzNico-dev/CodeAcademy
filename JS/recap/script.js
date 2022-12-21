@@ -273,42 +273,113 @@ const h1Tag2 = document.createElement('h1')
 
 //! taip pat append gali prideti paprasta string
 
-const mainTag = document.querySelector('main')
+// const mainTag = document.querySelector('main')
 
-const cityList = document.createElement('ul')
+// const cityList = document.createElement('ul')
 
-const cityListItem1 = document.createElement('li')
-cityListItem1.textContent = 'kaunas'
+// const cityListItem1 = document.createElement('li')
+// cityListItem1.textContent = 'kaunas'
 
-const cityListItem2 = document.createElement('li')
-cityListItem2.textContent = 'vilnius'
+// const cityListItem2 = document.createElement('li')
+// cityListItem2.textContent = 'vilnius'
 
-const cityListItem3 = document.createElement('li')
-cityListItem3.textContent = 'klaipeda'
+// const cityListItem3 = document.createElement('li')
+// cityListItem3.textContent = 'klaipeda'
 
-cityList.append(cityListItem1, cityListItem2, cityListItem3)
+// cityList.append(cityListItem1, cityListItem2, cityListItem3)
 
-const cityInput = document.createElement('input')
-cityInput.type = 'text'
+// const cityInput = document.createElement('input')
+// cityInput.type = 'text'
+// cityInput.addEventListener('keypress', (e) => {
+//     if(e.key === 'Enter'){
+//         // pasiimti is input miesta
+//         const inputValue = e.target.value
+//         if(checkIfCityAlreadyExsists(inputValue)){
+//             const cityAlreadyExistsWarning = document.createElement('p')
+//             cityAlreadyExistsWarning.textContent = 'wrong'
+//             mainTag.append(cityAlreadyExistsWarning)
+//         } else{
+//             const newCityElement = document.createElement('li')
+//             newCityElement.textContent = inputValue
+//             cityList.append(newCityElement)
+//         }
+//     }
+//         //sukurti li elementa
+//         const newCityLiElement = document.createElement('li')
+//         //duoti list elementui text value
+//         newCityLiElement.textContent = inputValue
+//         //prideti nauja list element prie esancio ul
+//         cityList.append(newCityLiElement)
+//         //isvalyti langa
+//         e.target.value = ' '
+//     }
+// )
+
+// function checkIfCityAlreadyExsists(inputValue){
+//     //pasiimti visus jau ivestus miestus
+//     const allCities = document.querySelectorAll('li')
+//     //palyginti nauja meista su ivestais miestais
+//     for (let i = 0; i < allCities.length; i++){
+//         if(inputValue === allCities[i].textContent){
+//             return true
+//         }
+//     }
+//     return false;
+//     //jei miestas jau egzistuoja sukuriame paragraph kuriame parasyta, kad miestas 
+//     // jau egzistuoja, o jei nera, tiesiog pridedame
+// }
+// mainTag.append(cityList, cityInput)
+
+const mainTag = document.querySelector('main');
+
+const cityList = document.createElement('ul');
+
+const cityListItem1 = document.createElement('li');
+cityListItem1.textContent = 'Vilnius';
+const cityListItem2 = document.createElement('li');
+cityListItem2.textContent = 'Kaunas';
+const cityListItem3 = document.createElement('li');
+cityListItem3.textContent = 'Klaipeda';
+
+cityList.append(cityListItem1, cityListItem2, cityListItem3);
+
+const cityInput = document.createElement('input');
+cityInput.type = 'text';
 cityInput.addEventListener('keypress', (e) => {
-    if(e.key === 'Enter'){
-        // pasiimti is input miesta
-        const inputValue = e.target.value
-        //sukurti li elementa
-        const newCityElement = document.createElement('li')
-        //duoti list elementui text value
-        newCityElement.textContent = inputValue
-        //prideti nauja list element prie esancio ul
-        cityList.append(newCityElement)
+  // const warningText = document.querySelector('p');
+  // if (warningText) {
+  //   warningText.remove();
+  // }
 
-        //pasiimti visus jau ivestus miestus
-        //palyginti nauja meista su ivestais miestais
-        //jei miestas jau egzistuoja sukuriame paragraph kuriame parasyta, kad miestas 
-        // jau egzistuoja, o jei nera, tiesiog pridedame
-
-        //isvalyti langa
-        e.target.value = ' '
+  if (e.key === 'Enter') {
+    const inputValue = e.target.value;
+    if (checkIfCityAlreadyExists(inputValue)) {
+      if (!document.querySelector('p')) {
+        const cityAlreadyExistsWarning = document.createElement('p');
+        cityAlreadyExistsWarning.textContent = 'City already exists';
+        mainTag.append(cityAlreadyExistsWarning);
+        setTimeout(() => {
+          cityAlreadyExistsWarning.remove();
+        }, 3000);
+      }
+    } else {
+      const newCityLiElement = document.createElement('li');
+      newCityLiElement.textContent = inputValue;
+      cityList.append(newCityLiElement);
     }
-})
-mainTag.append(cityList, cityInput)
 
+    e.target.value = '';
+  }
+});
+
+function checkIfCityAlreadyExists(inputValue) {
+  const allCities = document.querySelectorAll('li');
+  for (let i = 0; i < allCities.length; i++) {
+    if (inputValue.toLowerCase() === allCities[i].textContent.toLowerCase()) {
+      return true;
+    }
+  }
+  return false;
+}
+
+mainTag.append(cityList, cityInput);
