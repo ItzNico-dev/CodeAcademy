@@ -1,10 +1,20 @@
 * {
-  border: 0;
   box-sizing: border-box;
-}
-header .cloud{
-    
+  margin: 0;
+    padding: 0;
+    background-color: lightcyan;
 }
 header{
-    background-color: #EAF6F6;
+  width: 100%;
+    text-align: center;
+}
+header #pro {
+  color: red;
+  text-decoration: underline;
+  margin-right: 2px;
+  font-style: italic;
+}
+
+header img {
+  width: 30%;
 }

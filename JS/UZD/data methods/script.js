@@ -13,17 +13,29 @@
 
 // alert(milkPrice.toPrecision(3))
 
-const myBody = document.querySelector('body')
-const calculations = document.querySelector('form').addEventListener('submit', (e) => {
-    e.preventDefault()
-    const leters = document.querySelector('input').value
-    const price = document.querySelector('input:nth-of-type(2)').value
+// const myBody = document.querySelector('body')
+// const calculations = document.querySelector('form').addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     const leters = document.querySelector('input').value
+//     const price = document.querySelector('input:nth-of-type(2)').value
     
-     ResultTag = leters * price
+//      ResultTag = leters * price
     
-    let displayTag = document.createElement('h1')
-    displayTag.textContent = ResultTag.toFixed(2)
+//     let displayTag = document.createElement('h1')
+//     displayTag.textContent = ResultTag.toFixed(2)
    
-    myBody.append(displayTag)
+//     myBody.append(displayTag)
+
+// })
+const myBody = document.querySelector('body')
+const checkIfNumberIsEven = document.querySelector('form').addEventListener('submit', 
+(e) => {
+    e.preventDefault()
+    const userName = document.querySelector('#name').value
+    const userNumber = document.querySelector('#num').value
+    if(userNumber.isInteger){
+        alert('even')
+    }
 
 })
+
