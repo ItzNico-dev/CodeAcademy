@@ -330,56 +330,138 @@ const h1Tag2 = document.createElement('h1')
 // }
 // mainTag.append(cityList, cityInput)
 
-const mainTag = document.querySelector('main');
+// const mainTag = document.querySelector('main');
 
-const cityList = document.createElement('ul');
+// const cityList = document.createElement('ul');
 
-const cityListItem1 = document.createElement('li');
-cityListItem1.textContent = 'Vilnius';
-const cityListItem2 = document.createElement('li');
-cityListItem2.textContent = 'Kaunas';
-const cityListItem3 = document.createElement('li');
-cityListItem3.textContent = 'Klaipeda';
+// const cityListItem1 = document.createElement('li');
+// cityListItem1.textContent = 'Vilnius';
+// const cityListItem2 = document.createElement('li');
+// cityListItem2.textContent = 'Kaunas';
+// const cityListItem3 = document.createElement('li');
+// cityListItem3.textContent = 'Klaipeda';
 
-cityList.append(cityListItem1, cityListItem2, cityListItem3);
+// cityList.append(cityListItem1, cityListItem2, cityListItem3);
 
-const cityInput = document.createElement('input');
-cityInput.type = 'text';
-cityInput.addEventListener('keypress', (e) => {
-  // const warningText = document.querySelector('p');
-  // if (warningText) {
-  //   warningText.remove();
-  // }
+// const cityInput = document.createElement('input');
+// cityInput.type = 'text';
+// cityInput.addEventListener('keypress', (e) => {
+//   // const warningText = document.querySelector('p');
+//   // if (warningText) {
+//   //   warningText.remove();
+//   // }
 
-  if (e.key === 'Enter') {
-    const inputValue = e.target.value;
-    if (checkIfCityAlreadyExists(inputValue)) {
-      if (!document.querySelector('p')) {
-        const cityAlreadyExistsWarning = document.createElement('p');
-        cityAlreadyExistsWarning.textContent = 'City already exists';
-        mainTag.append(cityAlreadyExistsWarning);
-        setTimeout(() => {
-          cityAlreadyExistsWarning.remove();
-        }, 3000);
-      }
-    } else {
-      const newCityLiElement = document.createElement('li');
-      newCityLiElement.textContent = inputValue;
-      cityList.append(newCityLiElement);
-    }
+//   if (e.key === 'Enter') {
+//     const inputValue = e.target.value;
+//     if (checkIfCityAlreadyExists(inputValue)) {
+//       if (!document.querySelector('p')) {
+//         const cityAlreadyExistsWarning = document.createElement('p');
+//         cityAlreadyExistsWarning.textContent = 'City already exists';
+//         mainTag.append(cityAlreadyExistsWarning);
+//         setTimeout(() => {
+//           cityAlreadyExistsWarning.remove();
+//         }, 3000);
+//       }
+//     } else {
+//       const newCityLiElement = document.createElement('li');
+//       newCityLiElement.textContent = inputValue;
+//       cityList.append(newCityLiElement);
+//     }
 
-    e.target.value = '';
-  }
-});
+//     e.target.value = '';
+//   }
+// });
 
-function checkIfCityAlreadyExists(inputValue) {
-  const allCities = document.querySelectorAll('li');
-  for (let i = 0; i < allCities.length; i++) {
-    if (inputValue.toLowerCase() === allCities[i].textContent.toLowerCase()) {
-      return true;
-    }
-  }
-  return false;
+// function checkIfCityAlreadyExists(inputValue) {
+//   const allCities = document.querySelectorAll('li');
+//   for (let i = 0; i < allCities.length; i++) {
+//     if (inputValue.toLowerCase() === allCities[i].textContent.toLowerCase()) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// mainTag.append(cityList, cityInput);
+
+
+//! functions
+
+//? function declaration
+// function sayHello(){
+//   console.log('hello world')
+// }
+
+//? call function 
+// sayHello()
+
+//?function expression (arrow function)
+
+const sayHelloArrow = () => {
+  console.log('hello world arrow function')
 }
 
-mainTag.append(cityList, cityInput);
+//?task 1 
+
+
+function myName(){
+  console.log('name surname')
+}
+myName()
+
+const myNameArrow = () => (
+  console.log('name surname arrow')
+)
+myNameArrow()
+
+//? passing parameters
+
+function getMyName(fName, lName){
+  return `you can call me ${fName} ${lName}`
+}
+
+const fName = 'Matas'
+const myNameString = getMyName(fName, 'V')
+console.log(myNameString)
+
+//arrow
+
+const getMyNameArrow = (fName, lName) => 
+  `you can call me ${fName} ${lName}`
+
+console.log(getMyNameArrow('M', 'V'))
+
+function figureVolume(width, height, length){
+  let result = width * height * length
+  return `the volume is ${result}`
+}
+console.log(figureVolume(4,4,4))
+
+const figureVolumeArrow = (width1, height1, length1) => width1 * height1 * length1
+const height1 = 5
+length1 = 5
+width1 = 5
+console.log(figureVolumeArrow(height1, width1, length1))
+
+const temperatureInCelcius = 33
+
+function convertToF(){
+  return temperatureInCelcius * 1.8 +32
+}
+
+console.log(convertToF())
+
+const convertToFArrow = () => temperatureInCelcius * 1.8 +32
+console.log(convertToFArrow())
+
+function printMyNameWithDefault ( fname1 = 'name', lname1 = 'surname'){
+  return `you can call me ${fname1} ${lname1}`
+}
+console.log(printMyNameWithDefault(undefined, 'asdsad'))
+console.log(printMyNameWithDefault('dsad', 'saddd'))
+
+const printMyNameWithDefaultArrow = (firstName = "Marijus", lastName) =>
+  `You can call me ${firstName} ${lastName}`
+
+console.log(printMyNameWithDefaultArrow(undefined, "Romanovas"))
+
