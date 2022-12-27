@@ -509,3 +509,17 @@ const sayHelloArrow = () => {
 // }
 // console.log(emptyString())
 
+// Create a function wasteTime(), which would have a loop and would 
+// make 10000000 iterations. In every iteration it would just make dummy 
+// operation, e.g. 5 * 95 / 12; Function should return how long it took to 
+// run iterations. Tip. Set timestamp (Date.now()) before running function 
+// and subtract it at the end of the function from new timestamp. Write 
+// function as declaration and as arrow function. 
+
+function wasteTime(){
+  for(let index = 0; index < 10; index++){
+    let calc = (7 * 10) - 18
+    console.log(calc)
+  }}
+
+  wasteTime()
