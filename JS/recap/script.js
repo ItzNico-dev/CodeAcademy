@@ -404,71 +404,108 @@ const sayHelloArrow = () => {
 //?task 1 
 
 
-function myName(){
-  console.log('name surname')
-}
-myName()
+// function myName(){
+//   console.log('name surname')
+// }
+// myName()
 
-const myNameArrow = () => (
-  console.log('name surname arrow')
-)
-myNameArrow()
+// const myNameArrow = () => (
+//   console.log('name surname arrow')
+// )
+// myNameArrow()
 
 //? passing parameters
 
-function getMyName(fName, lName){
-  return `you can call me ${fName} ${lName}`
-}
+// function getMyName(fName, lName){
+//   return `you can call me ${fName} ${lName}`
+// }
 
-const fName = 'Matas'
-const myNameString = getMyName(fName, 'V')
-console.log(myNameString)
+// const fName = 'Matas'
+// const myNameString = getMyName(fName, 'V')
+// console.log(myNameString)
 
 //arrow
 
-const getMyNameArrow = (fName, lName) => 
-  `you can call me ${fName} ${lName}`
+// const getMyNameArrow = (fName, lName) => 
+//   `you can call me ${fName} ${lName}`
 
-console.log(getMyNameArrow('M', 'V'))
+// console.log(getMyNameArrow('M', 'V'))
 
-function figureVolume(width, height, length){
-  let result = width * height * length
-  return `the volume is ${result}`
-}
-console.log(figureVolume(4,4,4))
+// function figureVolume(width, height, length){
+//   let result = width * height * length
+//   return `the volume is ${result}`
+// }
+// console.log(figureVolume(4,4,4))
 
-const figureVolumeArrow = (width1, height1, length1) => width1 * height1 * length1
-const height1 = 5
-length1 = 5
-width1 = 5
-console.log(figureVolumeArrow(height1, width1, length1))
+// const figureVolumeArrow = (width1, height1, length1) => width1 * height1 * length1
+// const height1 = 5
+// length1 = 5
+// width1 = 5
+// console.log(figureVolumeArrow(height1, width1, length1))
 
-const temperatureInCelcius = 33
+// const temperatureInCelcius = 33
 
-function convertToF(){
-  return temperatureInCelcius * 1.8 +32
-}
+// function convertToF(){
+//   return temperatureInCelcius * 1.8 +32
+// }
 
-console.log(convertToF())
+// console.log(convertToF())
 
-const convertToFArrow = () => temperatureInCelcius * 1.8 +32
-console.log(convertToFArrow())
+// const convertToFArrow = () => temperatureInCelcius * 1.8 +32
+// console.log(convertToFArrow())
 
-function printMyNameWithDefault ( fname1 = 'name', lname1 = 'surname'){
-  return `you can call me ${fname1} ${lname1}`
-}
-console.log(printMyNameWithDefault(undefined, 'asdsad'))
-console.log(printMyNameWithDefault('dsad', 'saddd'))
+// function printMyNameWithDefault ( fname1 = 'name', lname1 = 'surname'){
+//   return `you can call me ${fname1} ${lname1}`
+// }
+// console.log(printMyNameWithDefault(undefined, 'asdsad'))
+// console.log(printMyNameWithDefault('dsad', 'saddd'))
 
-const printMyNameWithDefaultArrow = (firstName = "Marijus", lastName) =>
-  `You can call me ${firstName} ${lastName}`
+// const printMyNameWithDefaultArrow = (firstName = "Marijus", lastName) =>
+//   `You can call me ${firstName} ${lastName}`
 
-console.log(printMyNameWithDefaultArrow(undefined, "Romanovas"))
+// console.log(printMyNameWithDefaultArrow(undefined, "Romanovas"))
 
 //? IIFE
 
-*(function () {
-  console.log('mornin')
-})();
+// *(function () {
+//   console.log('mornin')
+// })();
 
-(() => console.log('mornin with arrow'))()
+// (() => console.log('mornin with arrow'))()
+
+//! tasks
+
+//todo task 1
+
+// function sum(a,b){
+//   return a + b
+// }
+// console.log(sum(5 , 5))
+
+// const sumArrow = (a , b) => a + b
+// console.log(sumArrow(5, 7))
+
+//todo 2: Write setTimeout with function to log hello after 5s;
+
+  // setTimeout(() => 
+  //   console.log('hello world')
+  // , 5000);
+
+//todo 3: Write setInterval with function to count times the 2s elapsed;
+// let number = 0
+// setInterval( times, 1000);
+// function times(){
+//   console.log(++number)
+// }
+
+//todo 4: Write a function that returns true if a string is empty and false otherwise;
+
+// function emptyString (string){
+//   if(string === ""){
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+// console.log(emptyString())
+
