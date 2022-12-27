@@ -465,3 +465,10 @@ const printMyNameWithDefaultArrow = (firstName = "Marijus", lastName) =>
 
 console.log(printMyNameWithDefaultArrow(undefined, "Romanovas"))
 
+//? IIFE
+
+*(function () {
+  console.log('mornin')
+})();
+
+(() => console.log('mornin with arrow'))()
