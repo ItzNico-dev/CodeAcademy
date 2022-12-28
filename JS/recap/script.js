@@ -515,3 +515,92 @@ const sayHelloArrow = () => {
 // run iterations. Tip. Set timestamp (Date.now()) before running function 
 // and subtract it at the end of the function from new timestamp. Write 
 // function as declaration and as arrow function. 
+
+
+//!inputs
+// const nameInput = document.querySelector('input[name="name"]')
+// const ageInput = document.querySelector('input[name="age"]')
+// const emailInput = document.querySelector('input[name="email"]')
+
+// const colorInputs = document.querySelectorAll('input[name="color"]')
+// console.log(colorInputs)
+
+// const carSelect = document.querySelector('select')
+
+// document.querySelector('button').addEventListener
+// ('click', (e) => {
+//   e.preventDefault()
+//   console.log(nameInput.value)
+//   console.log(ageInput.value)
+//   console.log(emailInput.value)
+
+//   console.log(colorInputs[0].checked)
+  
+//   console.log(carSelect.selectedIndex)
+// })
+
+
+//! task 1
+
+// const nameInput = document.querySelector('input[name="name"]');
+// const emailInput = document.querySelector('input[name="email"]');
+// const colorInputs = document.querySelectorAll('input[name="color"]');
+
+// document.querySelector('form').addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   const name = nameInput.value;
+//   const email = emailInput.value;
+//   let color;
+
+//   for (let index = 0; index < colorInputs.length; index++) {
+//     if (colorInputs[index].checked) {
+//       color = colorInputs[index].value;
+//       break;
+//     }
+//   }
+
+//   alert(`name=${name} \nemail=${email} \nfavorite color=${color ? color : 'no color is selected'}`);
+// });
+
+//! task 2
+
+// const checkboxGroup = document.querySelectorAll('input[type="checkbox"]');
+// const fruitVegetableSelect = document.querySelector('select');
+
+// document.querySelector('form').addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   let res = 'You selected';
+//   for (let i = 0; i < checkboxGroup.length; i++) {
+//     if (checkboxGroup[i].checked) {
+//       res += ` ${checkboxGroup[i].value}`;
+//     }
+//   }
+
+//   res += ` ${fruitVegetableSelect.value}`;
+
+//   alert(res);
+// });
+
+
+//! task 3
+
+const nameInput = document.querySelector('input[name="name"]')
+const ageInput = document.querySelector('input[name="age"]')
+const adressInput = document.querySelector('input[name="adress"]')
+
+const genderSelect = document.querySelectorAll('input[name="gender"]')
+
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault()
+  const name = nameInput.value
+  const age = ageInput.value
+  const adress = adressInput.value
+  let yourGender
+
+    for(let index = 0; index < genderSelect.length; index++){
+    if(genderSelect[index].checked){
+      yourGender = genderSelect[index].value
+    }
+  }
+  alert(`the details are: \nname -->  ${name} \nage --> ${age} \nadress --> ${adress} \ngender --> ${yourGender.value}`)
+})
