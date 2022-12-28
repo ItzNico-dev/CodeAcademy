@@ -515,11 +515,3 @@ const sayHelloArrow = () => {
 // run iterations. Tip. Set timestamp (Date.now()) before running function 
 // and subtract it at the end of the function from new timestamp. Write 
 // function as declaration and as arrow function. 
-
-function wasteTime(){
-  for(let index = 0; index < 10; index++){
-    let calc = (7 * 10) - 18
-    console.log(calc)
-  }}
-
-  wasteTime()
