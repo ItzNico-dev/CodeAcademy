@@ -696,68 +696,106 @@ const myMain = document.querySelector('main')
 
 // }
 
+//!--------------------------------------------------------
 
-const toDoInput = document.querySelector('input')
-const toDoList = document.querySelector('ul')
-const deleteAllButton = document.querySelector('button')
+// const toDoInput = document.querySelector('input')
+// const toDoList = document.querySelector('ul')
+// const deleteAllButton = document.querySelector('button')
 
-toDoList,addEventListener('keypress', AddNewToDo)
+// toDoList,addEventListener('keypress', AddNewToDo)
 
-deleteAllButton.addEventListener('click', () => {
-  const allLiElements = document.querySelectorAll('li')
-  for (let index = 0; index < allLiElements.length; index++) {
-    allLiElements[index].remove()
+// deleteAllButton.addEventListener('click', () => {
+//   const allLiElements = document.querySelectorAll('li')
+//   for (let index = 0; index < allLiElements.length; index++) {
+//     allLiElements[index].remove()
+//   }
+
+//   toggleButtonVisibility()
+// })
+
+// function AddNewToDo(e){
+//   removeWarning()
+//   if (e.key === 'Enter') {
+//     const inputValue = e.target.value
+//     if (!inputValue) {
+//       if (!document.querySelector('p')) {
+//         const warningContent = document.createElement('p')
+//         warningContent.textContent = 'nothing is there !!!!'
+//         myMain.append(warningContent)
+
+//       }
+//       return;
+//     }
+//     const li = document.createElement('li')
+//     li.textContent = `${inputValue} `
+
+//     const deleteButton = document.createElement('button')
+//     deleteButton.textContent = 'Delete'
+
+//     deleteButton.addEventListener('click', () => {
+//       li.remove()
+//       const liElements = document.querySelectorAll('li')
+//       if (!liElements.length) {
+//         toggleButtonVisibility()
+//       }
+//     })
+
+//     li.append(deleteButton)
+//     toDoList.append(li)
+//     e.target.value = ' '
+
+//     if (deleteAllButton.classList.contains('invisible')) {
+//       toggleButtonVisibility()
+//     }
+
+
+//   }
+// }
+
+// function removeWarning(){
+//   const par = document.querySelector('p')
+
+//   if (par) {
+//     par.remove()
+//   }
+// }
+// function toggleButtonVisibility(){
+//   deleteAllButton.classList.toggle('invisible')
+// }
+
+const data = [
+ { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+ { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+ { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+ { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
+ { title: "Wuthering Heights", author: "Emily Brontë", year: 1847 },
+ { title: "Moby-Dick", author: "Herman Melville", year: 1851 }
+];
+
+const ulElement =document.createElement('ul')
+const dataTable = document.querySelector('table')
+const generateTableButton = document.querySelector('button')
+generateTableButton.addEventListener('click', generateTable)
+
+function generateTable(){
+  
+  for (let index = 0; index < data.length; index++) {
+    dataTable.append(generateTableRow(data[index]))
   }
 
-  toggleButtonVisibility()
-})
-
-function AddNewToDo(e){
-  removeWarning()
-  if (e.key === 'Enter') {
-    const inputValue = e.target.value
-    if (!inputValue) {
-      if (!document.querySelector('p')) {
-        const warningContent = document.createElement('p')
-        warningContent.textContent = 'nothing is there !!!!'
-        myMain.append(warningContent)
-
-      }
-      return;
-    }
-    const li = document.createElement('li')
-    li.textContent = `${inputValue} `
-
-    const deleteButton = document.createElement('button')
-    deleteButton.textContent = 'Delete'
-
-    deleteButton.addEventListener('click', () => {
-      li.remove()
-      const liElements = document.querySelectorAll('li')
-      if (!liElements.length) {
-        toggleButtonVisibility()
-      }
-    })
-
-    li.append(deleteButton)
-    toDoList.append(li)
-    e.target.value = ' '
-
-    if (deleteAllButton.classList.contains('invisible')) {
-      toggleButtonVisibility()
-    }
-
-
-  }
 }
 
-function removeWarning(){
-  const par = document.querySelector('p')
+function generateTableRow(personData){
+    const trElement = document.createElement('tr')
 
-  if (par) {
-    par.remove()
-  }
-}
-function toggleButtonVisibility(){
-  deleteAllButton.classList.toggle('invisible')
+    const tdName = document.createElement('td')
+    tdName.textContent = personData.title
+    const tdAge = document.createElement('td')
+    tdAge.textContent = personData.author
+    const tdCountry = document.createElement('td')
+    tdCountry.textContent = personData.year
+
+    trElement.append(tdName, tdAge, tdCountry)
+
+    return trElement
 }
