@@ -790,10 +790,16 @@ function generateTableRow(personData){
 
     const tdName = document.createElement('td')
     tdName.textContent = personData.title
+    tdName.style.fontWeight = "bold"
+    tdName.style.color = "blue"
     const tdAge = document.createElement('td')
     tdAge.textContent = personData.author
+    tdAge.style.fontStyle = "italic"
+    tdAge.style.color = "green"
     const tdCountry = document.createElement('td')
     tdCountry.textContent = personData.year
+    tdCountry.style.fontSize = "smaller"
+    tdCountry.style.color = "red"
 
     trElement.append(tdName, tdAge, tdCountry)
 
