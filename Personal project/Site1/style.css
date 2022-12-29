@@ -1,20 +1,114 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-    padding: 0;
-    background-color: lightcyan;
-}
-header{
-  width: 100%;
-    text-align: center;
-}
-header #pro {
-  color: red;
-  text-decoration: underline;
-  margin-right: 2px;
-  font-style: italic;
+/* Add your CSS styles here */
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+  background-color: #f5f5f5;
 }
 
-header img {
-  width: 30%;
+header {
+  text-align: center;
+  margin: 50px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.about-section img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  margin: 0 auto;
+  display: block;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.experience-section,
+.education-section,
+.skills-section,
+.contact-section {
+  margin: 50px 0;
+}
+
+.experience-section h2,
+.education-section h2,
+.skills-section h2,
+.contact-section h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.experience-section li,
+.education-section li {
+  margin-bottom: 20px;
+}
+
+.experience-section h3,
+.education-section h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-section p,
+.education-section p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.skills-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-section li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 10px;
+}
+.copyright {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 50px 0;
+    color: #999999;
+  }
+  
+  /* Add your CSS styles here */
+  
+  /* Use a custom font for the headings */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+  
+  /* Add a gradient background to the header */
+  header {
+    background: linear-gradient(to right, #232526, #414345);
+    color: #fff;
+  }
+  
+  /* Add a hover effect to the contact links */
+  .contact-section a:hover {
+    color: #f5a623;
+}
+/* Add a box shadow to the profile picture */
+.about-section img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Use a monospace font for the copyright notice */
+.copyright {
+  font-family: 'Courier New', monospace;
 }

@@ -669,8 +669,10 @@ const myMain = document.querySelector('main')
 //     age,
 //     country,
 //   }
+//   data.push(person) 
 //   personTable.append(generateTableRow(person))
 // }
+
 
 // function generateTable(){
   
@@ -762,46 +764,117 @@ const myMain = document.querySelector('main')
 // function toggleButtonVisibility(){
 //   deleteAllButton.classList.toggle('invisible')
 // }
+//!------------------------------------------------------------------
+// const data = [
+//  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+//  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+//  { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+//  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
+//  { title: "Wuthering Heights", author: "Emily Brontë", year: 1847 },
+//  { title: "Moby-Dick", author: "Herman Melville", year: 1851 }
+// ];
 
-const data = [
- { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
- { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
- { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
- { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
- { title: "Wuthering Heights", author: "Emily Brontë", year: 1847 },
- { title: "Moby-Dick", author: "Herman Melville", year: 1851 }
-];
+// const ulElement =document.createElement('ul')
+// const dataTable = document.querySelector('table')
+// const generateTableButton = document.querySelector('button')
+// generateTableButton.addEventListener('click', generateTable)
 
-const ulElement =document.createElement('ul')
-const dataTable = document.querySelector('table')
-const generateTableButton = document.querySelector('button')
-generateTableButton.addEventListener('click', generateTable)
-
-function generateTable(){
+// function generateTable(){
   
-  for (let index = 0; index < data.length; index++) {
-    dataTable.append(generateTableRow(data[index]))
-  }
+//   for (let index = 0; index < data.length; index++) {
+//     dataTable.append(generateTableRow(data[index]))
+//   }
 
-}
+// }
 
-function generateTableRow(personData){
-    const trElement = document.createElement('tr')
+// function generateTableRow(personData){
+//     const trElement = document.createElement('tr')
 
-    const tdName = document.createElement('td')
-    tdName.textContent = personData.title
-    tdName.style.fontWeight = "bold"
-    tdName.style.color = "blue"
-    const tdAge = document.createElement('td')
-    tdAge.textContent = personData.author
-    tdAge.style.fontStyle = "italic"
-    tdAge.style.color = "green"
-    const tdCountry = document.createElement('td')
-    tdCountry.textContent = personData.year
-    tdCountry.style.fontSize = "smaller"
-    tdCountry.style.color = "red"
+//     const tdName = document.createElement('td')
+//     tdName.textContent = personData.title
+//     tdName.style.fontWeight = "bold"
+//     tdName.style.color = "blue"
+//     const tdAge = document.createElement('td')
+//     tdAge.textContent = personData.author
+//     tdAge.style.fontStyle = "italic"
+//     tdAge.style.color = "green"
+//     const tdCountry = document.createElement('td')
+//     tdCountry.textContent = personData.year
+//     tdCountry.style.fontSize = "smaller"
+//     tdCountry.style.color = "red"
 
-    trElement.append(tdName, tdAge, tdCountry)
+//     trElement.append(tdName, tdAge, tdCountry)
 
-    return trElement
-}
+//     return trElement
+// }
+//!----------------------------------------------------------
+// const items = [
+//   {
+//     name: "Item 1",
+//     price: 10
+//   },
+//   {
+//     name: "Item 2",
+//     price: 20
+//   },
+//   {
+//     name: "Item 3",
+//     price: 30
+//   },
+//   {
+//     name: "Item 4",
+//     price: 40
+//   },
+//   {
+//     name: "Item 5",
+//     price: 50
+//   }
+// ];
+
+// const generateButton = document.querySelector('#generateButton')
+// const addButton = document.querySelector('#addItemButton')
+// const dataTable = document.querySelector('table')
+// const itemInput = document.querySelector('input[name="item"]')
+// const priceInput = document.querySelector('input[name="price"]')
+
+// generateButton.addEventListener('click', generateTable)
+
+// addButton.addEventListener('click', addNewItem)
+
+// function generateTable(){
+//   for (let index = 0; index < items.length; index++) {
+//     dataTable.append(generateTableRow(items[index]))
+    
+//   }
+// }
+
+// function addNewItem(){
+//   trInputElement = document.createElement('tr')
+
+//   const 
+//   itemIn = itemInput.value,
+//   priceIn = priceInput.value
+
+//   const tdItemInput = document.createElement('td')
+//   tdItemInput.textContent = itemIn
+//   const tdPriceInput = document.createElement('td')
+//   tdPriceInput.textContent = priceIn
+
+//   trInputElement.append(tdItemInput, tdPriceInput)
+
+//   dataTable.append(trInputElement)
+
+// }
+
+// function generateTableRow(itemData){
+//   const trElement = document.createElement('tr')
+
+//   const tdName = document.createElement('td')
+//   tdName.textContent = itemData.name
+//   const tdPrice = document.createElement('td')
+//   tdPrice.textContent = itemData.price
+
+//   trElement.append(tdName, tdPrice)
+
+//   return trElement
+// }
