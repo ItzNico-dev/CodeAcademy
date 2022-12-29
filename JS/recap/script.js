@@ -584,23 +584,26 @@ const sayHelloArrow = () => {
 
 //! task 3
 
-const nameInput = document.querySelector('input[name="name"]')
-const ageInput = document.querySelector('input[name="age"]')
-const adressInput = document.querySelector('input[name="adress"]')
+// const nameInput = document.querySelector('input[name="name"]')
+// const ageInput = document.querySelector('input[name="age"]')
+// const adressInput = document.querySelector('input[name="adress"]')
 
-const genderSelect = document.querySelectorAll('input[name="gender"]')
+// const genderSelect = document.querySelectorAll('input[name="gender"]')
 
-document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault()
-  const name = nameInput.value
-  const age = ageInput.value
-  const adress = adressInput.value
-  let yourGender
+// document.querySelector('form').addEventListener('submit', (e) => {
+//   e.preventDefault()
+//   const name = nameInput.value
+//   const age = ageInput.value
+//   const adress = adressInput.value
+//   let yourGender
 
-    for(let index = 0; index < genderSelect.length; index++){
-    if(genderSelect[index].checked){
-      yourGender = genderSelect[index].value
-    }
-  }
-  alert(`the details are: \nname -->  ${name} \nage --> ${age} \nadress --> ${adress} \ngender --> ${yourGender.value}`)
-})
+//     for(let index = 0; index < genderSelect.length; index++){
+//     if(genderSelect[index].checked){
+//       yourGender = genderSelect[index].value
+//     }
+//   }
+//   alert(`the details are: \nname -->  ${name} \nage --> ${age} \nadress --> ${adress} \ngender --> ${yourGender.value}`)
+// })
+
+//! html element creation JS
+
