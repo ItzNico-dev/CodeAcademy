@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 10% 10%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+  padding: 7%;
+}
+header div {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  margin-bottom: 20px;
+}
+header a {
+  text-decoration: none;
+  color: purple;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+main {
+  padding: 7%;
+  background-color: grey;
+  margin: 5%;
+}
+main tr {
+  text-align: left;
+}
+main th {
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+main td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid black;
+}/*# sourceMappingURL=index.css.map */
