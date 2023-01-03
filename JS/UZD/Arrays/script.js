@@ -138,9 +138,35 @@
 //   }
 // ];
 
-// const Adults = people.filter((x) => { return x.age >= 18}).map(person => person.name).sort()
+// const Adults = people.filter((x) => {
+    //  return x.age >= 18}).map(person => person.name).sort()
 // console.log(Adults)
 
 
+const items = [
+    {name: "lemonade", price: 50}, 
+    {name: "lime", price: 10},
+    {name: "orange", price: 5},
+    {name: "banana", price: 7},
+    {name: "nut :D", price: 2},
+]
 
+const getMostAndLEastExpensive = 
+items.sort((a, b) => { return b.price - a.price})
+console.log('Most expensive -> ' + getMostAndLEastExpensive[0].name + 
+' \nLeast expensive -> ' + getMostAndLEastExpensive[getMostAndLEastExpensive.length - 1].name)
 
+const drinks = [
+  { name: "lemonade", price: 50 },
+  { name: "lime", price: 10 },
+  {name: "orange", price: 5},
+  {name: "banana", price: 7},
+  {name: "peaches", price: 2},
+]
+
+function fn(items){
+  items.sort((a, b) => a.price - b.price)
+  return {'cheapest': items[0].name, 'most expensive': items[items.length - 1].name}
+}
+
+console.log(fn(drinks))
