@@ -173,15 +173,15 @@ console.log(concatArr)
 
 //! spread operator
 
-const concaWithSpreadOperator = [...spliceArray, ...arrayOne, ...arrayTwo]
-const arrayCopied = [...spliceArray]
-console.log(concaWithSpreadOperator)
-console.log(arrayCopied)
+// const concaWithSpreadOperator = [...spliceArray, ...arrayOne, ...arrayTwo]
+// const arrayCopied = [...spliceArray]
+// console.log(concaWithSpreadOperator)
+// console.log(arrayCopied)
 
 
-console.log(concaWithSpreadOperator.indexOf(12, 0)) //looks for an item from the front
-console.log(concaWithSpreadOperator.lastIndexOf(12)) //looks for an item from the end
-console.log(concaWithSpreadOperator.includes(12)) //looks for an item in the array
+// console.log(concaWithSpreadOperator.indexOf(12, 0)) //!looks for an item from the front
+// console.log(concaWithSpreadOperator.lastIndexOf(12)) //!looks for an item from the end
+// console.log(concaWithSpreadOperator.includes(12)) //!looks for an item in the array
 
 //! Callback function
 
@@ -190,19 +190,20 @@ console.log(concaWithSpreadOperator.includes(12)) //looks for an item in the arr
 // function myFunction(){
 // }
 
-function getName(){
-    const name = prompt('enter name')
-    return name
-}
+// function getName(){
+//     const name = prompt('enter name')
+//     return name
+// }
 
-function getLastName(){
-    const lastName = prompt('enter last name')
-    return lastName
-}
+// function getLastName(){
+//     const lastName = prompt('enter last name')
+//     return lastName
+// }
 
-function displayName(nameFn){
-    console.log('call me ' + nameFn())
-}
+// function displayName(nameFn){
+//     console.log('call me ' + nameFn())
+// }
 
-displayName(getName)
-displayName(getLastName)
+// displayName(getName)
+// displayName(getLastName)
+
