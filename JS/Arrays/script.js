@@ -166,10 +166,10 @@ const spliceArray = [
 
 //! concat 
 
-const concatArr = spliceArray.concat(arrayOne, arrayTwo)
+// const concatArr = spliceArray.concat(arrayOne, arrayTwo)
 
-console.log(spliceArray)
-console.log(concatArr)
+// console.log(spliceArray)
+// console.log(concatArr)
 
 //! spread operator
 
@@ -206,4 +206,102 @@ console.log(concatArr)
 
 // displayName(getName)
 // displayName(getLastName)
+
+//! common array methods
+
+const students = [
+  {
+    id: 1,
+    f_name: "Alex",
+    l_name: "B",
+    gender: "M",
+    married: false,
+    age: 17,
+    paid: 250,
+    courses: ["JavaScript", "React"],
+  },
+  {
+    id: 2,
+    f_name: "Ibrahim",
+    l_name: "M",
+    gender: "M",
+    married: true,
+    age: 32,
+    paid: 150,
+    courses: ["JavaScript", "PWA"],
+  },
+  {
+    id: 3,
+    f_name: "Rubi",
+    l_name: "S",
+    gender: "F",
+    married: false,
+    age: 27,
+    paid: 350,
+    courses: ["Blogging", "React", "UX"],
+  },
+  {
+    id: 4,
+    f_name: "Zack",
+    l_name: "F",
+    gender: "M",
+    married: true,
+    age: 36,
+    paid: 250,
+    courses: ["Git", "React", "Branding"],
+  },
+];
+
+//! foreach
+// array.forEach(function(currentValue, index, arr), thisValue)
+
+// students.forEach(function (student, index, array){
+//     console.log(student.f_name, index, array)
+// })
+
+//!map
+// array.forEach(function(currentValue, index, arr), thisValue)
+
+// const fullName = students.map((student) => {return student.f_name + ' ' + student.l_name + ' ' + student.age})
+
+// console.log(fullName)
+
+//! includes
+// array.includes(element, start)
+
+// const includesArr = [
+//     'hello',
+//     'world',
+//     '!!!'
+// ]
+
+// console.log(includesArr.includes('hello'))
+// console.log(includesArr.includes('Hello'))
+
+//! filter
+// array.forEach(function(currentValue, index, arr), thisValue)
+
+// const femaleStudents = students.filter((student) => {return student.gender === 'F'})
+// console.log(femaleStudents)
+
+//! reduce
+// array.forEach(function(total, currentValue, currentIndex, arr), initialValue)
+
+// const reduceArr = [
+//     1,
+//     3,
+//     9
+// ]
+
+// const sum = reduceArr.reduce((sum, value) => {return sum + value},0) 
+// console.log(sum)
+
+// const balance = students.reduce((accountBallance, student) => {return accountBallance - student.paid},1500)
+// console.log(balance)
+
+//! some 
+// array.some(function(value, index, arr),this)
+
+const hasUnderageStudents = students.some((student) => {return student.age < 18})
+console.log(hasUnderageStudents)
 

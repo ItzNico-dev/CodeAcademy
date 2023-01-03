@@ -27,11 +27,11 @@
 
 //! task 1 & 2
 
-// const cars = [
-//     'BMW',
-//     'VW',
-//     'Audi'
-// ]
-// cars.forEach(element => {
-//     console.log(element)
-// })
+const cars = [
+    'BMW',
+    'VW',
+    'Audi'
+]
+cars.forEach(element => {
+    console.log(element)
+})
