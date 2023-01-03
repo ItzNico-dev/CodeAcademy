@@ -302,6 +302,44 @@ const students = [
 //! some 
 // array.some(function(value, index, arr),this)
 
-const hasUnderageStudents = students.some((student) => {return student.age < 18})
-console.log(hasUnderageStudents)
+// const hasUnderageStudents = students.some((student) => {return student.age < 18})
+// console.log(hasUnderageStudents)
+
+//! every
+// array.some(function(currentValue, index, arr),thisValue)
+
+// const hasSelectedTwoCourses = students.every((student) => {return student.courses.length >= 2})
+// console.log(hasSelectedTwoCourses)
+
+//! sort
+// arrayOne.sort(comparedFunction) or (a, b)
+
+// const sortArray = [
+//     'javascript', ' CSS', 'HTML'
+// ]
+// sortArray.sort()
+// console.log(sortArray)
+
+// const numbersArray = [
+//     10,
+//     9,
+//     5
+// ]
+
+// numbersArray.sort((a,b) => {return a - b})
+// console.log(numbersArray)
+
+//! from
+// array.from(object, mapFunction, thisValue)
+
+// const divs = document.querySelectorAll('div')
+// console.log(divs)
+// const arrayOfDivs = Array.from(divs)
+// console.log(arrayOfDivs)
+// const divContents = arrayOfDivs.map((div) => {return div.textContent})
+// console.log(divContents)
+//!find 
+
+//  findStudent = students.find((student) => {return student.id === 1})
+//  console.log(findStudent)
 
