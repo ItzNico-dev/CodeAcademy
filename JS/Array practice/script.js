@@ -195,3 +195,65 @@
 //     return person.firstName + ' ' + person.lastName
 // })
 // console.log(fullNames);
+
+
+//! Task: Write a function called sumOfOddNumbers that takes 
+//! in an array of numbers and returns the sum of all odd numbers 
+//! in the array.
+
+//! For example, the following input array:
+
+// const numbers = [1, 2, 3, 4, 5]
+
+// function sumOfOddNumbers(num){
+//     return num.reduce((acc, x) => {
+//         if(x % 2 !== 0){
+//             return acc + x
+//         } else{
+//             return acc
+//         }
+//     }, 0)
+// }
+
+// console.log(sumOfOddNumbers(numbers));
+
+
+//! Task:
+
+//! Use the find method to find the first object in the following 
+//! array of arrays that has a name property with the value "John":
+
+let groups = [
+
+  [
+
+    { name: "Jane", age: 21 },
+    { name: "John", age: 30 }
+
+  ],
+
+  [
+
+    { name: "Bob", age: 25 },
+    { name: "Mary", age: 35 }
+
+  ],
+
+  [
+
+    { name: "Alice", age: 40 },
+    { name: "Mike", age: 45 }
+
+  ]
+
+];
+
+const john = groups.find((group) => {
+    return group.find((person) => {
+        return person.name === 'John'
+    })
+})
+
+console.log(john);
+
+
