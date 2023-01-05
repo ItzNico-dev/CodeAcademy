@@ -123,5 +123,15 @@ console.log(data.filter((personGender) => {
 console.log(data.filter((year ) => {
     return year.car_year >= 2000}
     ))
-
-
+console.log(
+        data
+          .filter(
+            (person) => person.shirt_size === "XS" || person.shirt_size === "S"
+          )
+          .map((person) => ({
+            id: person.id,
+            first_name: person.first_name,
+            shirt_size: person.shirt_size,
+          }))
+          .sort((a, b) => (a.first_name > b.first_name ? 1 : -1))
+      );
