@@ -98,4 +98,3 @@
 // console.log(person1.age())
 // console.log(person1.fullName())
 
-//! task 2

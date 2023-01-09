@@ -41,5 +41,62 @@
 // console.log(magazine1.getMonth())
 // console.log(Magazine.frequency)
 
-//! task 1
+//! task 2
 
+// class Movie{
+//     constructor(name, year, director, budget, income){
+//         this.name = name,
+//         this.year = year,
+//         this.director = director,
+//         this.budget = budget,
+//         this.income = income
+//     }
+//     getIntroduction(){
+//         return `Movie name: ${this.name} \nMovie year: ${this.year} \nMovie director: ${this.director}`
+//     }
+//     getProfit(){
+//         return  `${this.budget}` - `${this.income}`
+//     }
+// }
+
+// const movie1 = new Movie('JWA', '2018', 'Steven Spielberg', 255, 100)
+
+// console.log(movie1)
+// console.log(movie1.getIntroduction())
+// console.log(movie1.getProfit())
+
+
+//! task 3
+
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+// }
+
+// class Rabbit extends Animal {
+//   constructor() {
+//     super(name)
+//     this.name = name;
+//     this.created = Date.now();
+//   }
+// }
+
+// const rabbit = new Rabbit("White Rabbit"); 
+// console.log(rabbit)
+
+//! task 4
+
+class Factory{
+    constructor(make,model,year){
+        this.make = make,
+        this.model = model,
+        this.year = year
+    }
+    getIntroduction(){
+        return `${this.make}` + ' ' + `${this.model}`
+    }
+    getAge(){
+        return
+    }
+}
