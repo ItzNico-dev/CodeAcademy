@@ -169,40 +169,71 @@
 
 // asyncFunction()
 
-const promise2 = new Promise((resolve) => {
-  setTimeout(resolve, 500, "start");
-});
+// const promise2 = new Promise((resolve) => {
+//   setTimeout(resolve, 500, "start");
+// });
 
-const promise3 = new Promise((resolve) => {
-  setTimeout(resolve, 1500, "second promise fulfilled");
-});
+// const promise3 = new Promise((resolve) => {
+//   setTimeout(resolve, 1500, "second promise fulfilled");
+// });
 
-const promise4 = new Promise((resolve) => {
-  setTimeout(resolve, 300, "last promise fulfilled");
-});
+// const promise4 = new Promise((resolve) => {
+//   setTimeout(resolve, 300, "last promise fulfilled");
+// });
 
 
 
-Promise.all([promise2, promise3, promise4]).then((data) => console.log(data));
+// Promise.all([promise2, promise3, promise4]).then((data) => console.log(data));
 
-async function waitForAll() {
-    const data = await Promise.all((promise2, promise3, promise4))
-    console.log(data)
-}
+// async function waitForAll() {
+//     const data = await Promise.all((promise2, promise3, promise4))
+//     console.log(data)
+// }
 
 // waitForAll()
 
 //? errors with async/await
 
-const catchError = async () => {
-  try {
-    const resultPromiseTwo = await promise2;
-    console.log(resultPromiseTwo);
-  } catch (e) {
-    console.log("Error caught: " + e);
-  } finally {
-    console.log('finished working with promise')
-  }
-};
+// const catchError = async () => {
+//   try {
+//     const resultPromiseTwo = await promise2;
+//     console.log(resultPromiseTwo);
+//   } catch (e) {
+//     console.log("Error caught: " + e);
+//   } finally {
+//     console.log('finished working with promise')
+//   }
+// };
 
-catchError();
+// catchError();
+
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const randomNum = Math.floor(Math.random()*5)
+
+        if (randomNum === 0) {
+            reject()
+        } else {
+            resolve()
+        }
+        // switch(randomNum){
+        //     case 0: console.log('works')
+        //             break
+        //     case 1: console.log('works')
+        //             break
+        //     case 2: console.log('works')
+        //             break
+        //     case 3: console.log('works')
+        //             break
+        //     case 4: console.log('doesnt work')
+        //     default: console.log('somethin went wrong')
+        // }
+        console.log(randomNum)
+    }, 5000)})
+
+
+promise
+  .then(() => "This is message")
+  .then((message) => alert(message))
+  .catch(() => alert("Oops, pažadas buvo atmestas"))
