@@ -210,32 +210,31 @@
 
 //! tasks
 
-// const promise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         const randomNum = Math.floor(Math.random()*5)
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const randomNum = Math.floor(Math.random()*5)
 
-//         if (randomNum === 0) {
-//             reject()
-//         } else {
-//             resolve()
-//         }
-        // switch(randomNum){
-        //     case 0: console.log('works')
-        //             break
-        //     case 1: console.log('works')
-        //             break
-        //     case 2: console.log('works')
-        //             break
-        //     case 3: console.log('works')
-        //             break
-        //     case 4: console.log('doesnt work')
-        //     default: console.log('somethin went wrong')
-        // }
-//         console.log(randomNum)
-//     }, 5000)})
+        if (randomNum === 0) {
+            reject()
+        } else {
+            resolve()
+        }
+        switch(randomNum){
+            case 0: console.log('works')
+                    break
+            case 1: console.log('works')
+                    break
+            case 2: console.log('works')
+                    break
+            case 3: console.log('works')
+                    break
+            case 4: console.log('doesnt work')
+        }
+        console.log(randomNum)
+    }, 5000)})
 
 
-// promise
-//   .then(() => "This is message")
-//   .then((message) => alert(message))
-//   .catch(() => alert("Oops, pažadas buvo atmestas"))
+promise
+  .then(() => "This is message")
+  .then((message) => alert(message))
+  .catch(() => alert("Oops, pažadas buvo atmestas"))

@@ -2,7 +2,7 @@
 
 //? get github users
 
-// const url = 'https://api.github.com/users'
+const url = 'https://api.github.com/users'
 const myBody = document.querySelector('body')
 
 // fetch(url)
@@ -25,34 +25,27 @@ const myBody = document.querySelector('body')
 
 //? get bunch
 
-// const urlPicsum = 'https://picsum.photos/v2/list'
-// const getBunch = async () => {
+const urlPicsum = 'https://picsum.photos/v2/list'
+const getBunch = async () => {
 
-//   try {
-//     const response = await fetch(urlPicsum);
-//     const data = await response.json();
+  try {
+    const response = await fetch(urlPicsum);
+    const data = await response.json();
 
-//     myBody.style.display = "flex";
-//     myBody.style.flexWrap = "wrap";
-//     data.forEach((imageData) => {
-//       const image = document.createElement("img");
-//       image.setAttribute("src", imageData.download_url);
-//       image.setAttribute("width", "200px");
-//       myBody.append(image);
-//     });
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
-
-
-
-// const button = document.querySelector("button");
-// button.addEventListener("click", getBunch);
+    myBody.style.display = "flex";
+    myBody.style.flexWrap = "wrap";
+    data.forEach((imageData) => {
+      const image = document.createElement("img");
+      image.setAttribute("src", imageData.download_url);
+      image.setAttribute("width", "200px");
+      myBody.append(image);
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
 
 
 
-
-
-
-
+const button = document.querySelector("button");
+button.addEventListener("click", getBunch);
