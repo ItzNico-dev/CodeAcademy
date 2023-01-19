@@ -300,6 +300,17 @@ const url = 'https://test-api-faker.herokuapp.com/cafe04/wedding'
 //     })
 // ))
 
+//! ats
+
+
+// async function countPlusOne(){
+//     const res = await fetch('https://test-api-faker.herokuapp.com/cafe04/wedding')
+//     const data = await res.json()
+//     const count = data.filter( element => element.plusOne)
+//     console.log(count.length)
+// }
+// countPlusOne()
+
 
 // Check list of guests and calculate total amount of guests at 
 // the wedding: If ‘attending’ marked, count as 1, if ‘attending’ 
@@ -323,6 +334,56 @@ const url = 'https://test-api-faker.herokuapp.com/cafe04/wedding'
 //     })
 // ))
 
+//! ats
+
+// async function countAttending(){
+//     const res = await fetch('https://test-api-faker.herokuapp.com/cafe04/wedding')
+//     const data = await res.json()
+
+
+//     const count = data.filter( element => element.attending)
+//     console.log(count.length)
+// }
+// countAttending()
+
+//! merged above two
+
+
+// async function countAttendingOrPlusOne(param){
+//     const res = await fetch('https://test-api-faker.herokuapp.com/cafe04/wedding')
+//     const data = await res.json()
+
+
+//     const count = data.filter( element => element[param])
+//     console.log(count.length)
+// }
+// countAttendingOrPlusOne('attending')
+// countAttendingOrPlusOne('plusOne')
+
+// //! ats to the complex counting
+
+// async function countTotal(){
+//     const res = await fetch('https://test-api-faker.herokuapp.com/cafe04/wedding')
+//     const data = await res.json()
+
+//     let sum = 0
+
+//     data.forEach(element => {
+//         if (element.attending) {
+//             if (element.plusOne) {
+//                 sum+=2
+//             }else{
+//                 sum++
+//             }
+//         }
+//     })
+//     console.log(sum)
+// }
+
+// countTotal()
+
+
+
 // Add HTML to have input, where you can enter your or other 
 // name, and button, with title ‘Check’. After clicking button, 
 // output info to the page: 
@@ -334,48 +395,33 @@ const url = 'https://test-api-faker.herokuapp.com/cafe04/wedding'
 // d) Amountof total attendees: <amount>;
 
 
-// const submitButton = document.querySelector('form').addEventListener('submit',checkForInfo)
+const myBody = document.querySelector('body')
 
-// function checkForInfo(){
-// fetch(url)
-// .then((response) => 
-//     response.json()
-// )
-// .then((data) => (
-//     data.forEach((user) => {
-//         const userInput = document.querySelector('input').value
-//         if (user.name === userInput) {
-//             if (user.vip === true) {
-//                 console.log('yra')
-//             } else {
-//                 console.log('nera')
-//             }
-//             console.log(user)
-//         }
-        
-//     })
-// ))
-// }
+const nameInput = document.querySelector('input')
+document.querySelector('button').addEventListener('click', checkHandler)
+
+async function checkHandler(){
+    const name = nameInput.value
+    const resParty = await fetch('https://test-api-faker.herokuapp.com/cafe04/party')
+    const partyData = await resParty.json()
+
+    const person = partyData.find((person) => {
+        person.name.split(' ')[0] === name
+    })
+    const inPartyP = document.createElement('p')
+
+
+    const partyPTextContent = `${person.name.split(' ')[0]} ${person.vip ? 'is vip':'isnt vip'}`
+    inPartyP.textContent = partyPTextContent
 
 
 
-
-
-// const submitButton = document.querySelector('form')
-
-// fetch(url)
-// .then((response) => 
-//     response.json(),
-//     JSON.stringify()
-// )
-// .then((data) => (
-//     data.forEach((user) => {
-//         if (user.plusOne === true) {
-//             console.log(JSON.stringify())
-//         }
-        
-//     })
-// ))
+    inPartyP.textContent = person.name.split(' ')[0]
+    myBody.appent(inPartyP)
 
 
 
+}      
+
+
+checkHandler()
