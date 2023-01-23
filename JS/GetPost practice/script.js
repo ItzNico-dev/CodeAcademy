@@ -125,14 +125,36 @@
 // };
 
 // fetchRandomUser();
+    fetch("https://magnetic-melon-yam.glitch.me")
+    .then(response => response.json())
+    .then(data => {
+        const table = document.createElement("table");
+        const thead = document.createElement("thead");
+        const tbody = document.createElement("tbody");
 
+        // Create table header
+        const headerRow = document.createElement("tr");
+        Object.keys(data[0]).forEach(key => {
+            const th = document.createElement("th");
+            th.textContent = key;
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
 
-const taskURL = "https://boiling-reaches-93648.herokuapp.com/week-3/party"
+        // Create table rows
+        data.forEach(item => {
+            const row = document.createElement("tr");
+            Object.values(item).forEach(value => {
+                const cell = document.createElement("td");
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+            tbody.appendChild(row);
+        });
+        table.appendChild(tbody);
 
-const checkData = async () => {
-    const response = await fetch(taskURL)
-    const data = response.json()
-    console.log(data)
-}
-
-checkData()
+        // Append the table to the body of the document
+        document.body.appendChild(table);
+    })
+    .catch(error => console.error(error));
