@@ -88,6 +88,60 @@ const JSON_PLACEHOLDER_BASE_URL = "https://jsonplaceholder.typicode.com/posts/"
 
 //! deleteProduct(5)
 
+// const taskURL = 'https://testapi.io/api/Marijus/resource/students'
+
+// const getData = async () =>{
+//     const response = await fetch(taskURL)
+//     const data = await response.json()
+//     console.log(data)
+// }
+
+// getData()
+
+// async function  postData(url = '', data = {}){
+//     const response = await fetch(taskURL, {
+//         method: 'POST',
+//         headers:  {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//     })
+//     return response.json()
+    
+// }
+
+// postData('https://testapi.io/api/Marijus/resource/students', {
+//     name: 'Matas',
+//     town: 'Kaunas',
+//     hometown: 'Kaunas'
+// })
+// .then((data) => {
+//     console.log(data)
+//   })
+
+
+
+  const fetchData = async () => {
+    const response = await fetch('https://testapi.io/api/Marijus/resource/students')
+    const data = response.json()
+    console.log(data)
+  }
+
+  fetchData()
+
+
+// const updatePost = async (postId) => {
+//     const response = await fetch(JSON_PLACEHOLDER_BASE_URL + postId, {
+//         method: "PUT",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({ title: "updated title", body: "updated body" }),
+//     })
+//     const info = await response.json()
+//     console.log(info)
+// }
+
 
 
 

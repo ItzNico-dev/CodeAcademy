@@ -80,11 +80,19 @@
 
 // makeRequest()
 
+//! ------------------------------------------------------------
 
-
-
-
-
-
-
+// const promise = new Promise((resolve, reject) => {
+//     let random = Math.floor(Math.random()*5+1)
+//     setTimeout(() => {
+//     if(random === 1){
+//       reject();
+//     }
+//     else{
+//       resolve()
+//     }
+//   }, 5000)
+// }
+// )
+// .then(() => alert('works')).catch(() => alert('Oops, promise was rejected'))
 
