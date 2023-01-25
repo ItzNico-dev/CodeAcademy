@@ -121,13 +121,13 @@ const JSON_PLACEHOLDER_BASE_URL = "https://jsonplaceholder.typicode.com/posts/"
 
 
 
-  const fetchData = async () => {
-    const response = await fetch('https://testapi.io/api/Marijus/resource/students')
-    const data = response.json()
-    console.log(data)
-  }
+  // const fetchData = async () => {
+  //   const response = await fetch('https://testapi.io/api/Marijus/resource/students')
+  //   const data = response.json()
+  //   console.log(data)
+  // }
 
-  fetchData()
+  // fetchData()
 
 
 // const updatePost = async (postId) => {
@@ -142,7 +142,13 @@ const JSON_PLACEHOLDER_BASE_URL = "https://jsonplaceholder.typicode.com/posts/"
 //     console.log(info)
 // }
 
+const BASE_URL = 'https://olive-bead-glazer.glitch.me'
 
+const getData = async () => {
+  const response = await fetch(BASE_URL)
+  const data = await response.json()
+  console.log(data)
+}
 
-
+getData()
 
