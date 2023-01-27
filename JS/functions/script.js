@@ -43,7 +43,7 @@
 
 //? function udage example
 
- function checkAge(age) {
+//  function checkAge(age) {
 //     if (age >= 18) {
   
 //       return true;
@@ -96,7 +96,7 @@
 
     //  sum2(2)
 
-}
+// }
 
 // let cities = ["Vilnius", "Kaunas", "Klaipėda", "Šiauliai", "Panevėžys", ”Telšiai"];
 
@@ -123,18 +123,18 @@
 
 //! task 2
 
-function min(a, b) {
-    if (a < b) {
-        return a;
-    }
-    return b;
-}
-console.log(min(1 , 5))
+// function min(a, b) {
+//     if (a < b) {
+//         return a;
+//     }
+//     return b;
+// }
+// console.log(min(1 , 5))
 
-const min2 = (a, b) => {
-    if (a < b) {
-        return a;
-    }
-    return b
-}
-console.log(min2(5,10))
+// const min2 = (a, b) => {
+//     if (a < b) {
+//         return a;
+//     }
+//     return b
+// }
+// console.log(min2(5,10))
