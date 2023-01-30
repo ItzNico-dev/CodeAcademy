@@ -10,3 +10,19 @@ Pastaba: rezultatas turi būti matomas pateikus formą ir atvaizduojamas
 ------------------------------------------------------------------- */
 
 
+const form = document.querySelector("form")
+const input = document.querySelector("#search")
+const submitBtn = document.querySelector("#submit-btn")
+const myBody = document.querySelector('body')
+
+submitBtn.addEventListener("click", function(event) {
+  event.preventDefault()
+  const kilograms = Number(input.value)
+  const pounds = kilograms * 2.2046
+  const grams = kilograms / 0.0010000
+  const oz = kilograms * 35.274
+  const h1Tag = document.createElement('h1')
+  h1Tag.textContent = `${kilograms} kilograms is \n${pounds} pounds \n${grams} grams \n${oz} oz`
+  myBody.append(h1Tag)
+  input.value = '';
+})
