@@ -23,11 +23,19 @@ router.delete('/tasks/:id', (req, res) => {
   const { id } = req.params;
 
   const taskIndex = tasks.findIndex((item) => item.id === +id);
-  tasks.splice(taskIndex, 1);
 
-  res.json({
-    success: true,
-  });
+  if (taskIndex !== -1) {
+    tasks.splice(taskIndex, 1);
+
+    res.json({
+      success: true,
+    });
+  } else {
+    res.status(404);
+    res.json({
+      status: 'Task not found',
+    });
+  }
 });
 
 router.get('/tasks', (req, res) => {
@@ -38,7 +46,14 @@ router.get('/tasks/:id', (req, res) => {
   const { id } = req.params;
   const task = tasks.find((item) => item.id === +id);
 
-  res.json(task);
+  if (task) {
+    res.json(task);
+  } else {
+    res.status(404);
+    res.json({
+      status: 'Task not found',
+    });
+  }
 });
 
 router.put('/tasks/:id', (req, res) => {
@@ -47,12 +62,19 @@ router.put('/tasks/:id', (req, res) => {
 
   const taskIndex = tasks.findIndex((item) => item.id === +id);
 
-  tasks[taskIndex].name = name;
-  tasks[taskIndex].description = description;
+  if (taskIndex !== -1) {
+    tasks[taskIndex].name = name;
+    tasks[taskIndex].description = description;
 
-  res.json({
-    success: true,
-  });
+    res.json({
+      success: true,
+    });
+  } else {
+    res.status(404);
+    res.json({
+      status: 'Task not found',
+    });
+  }
 });
 
 export default router;
