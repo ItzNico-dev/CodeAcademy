@@ -1,0 +1,15 @@
+{
+  "name": "first-lessons-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "casual": "^1.6.2"
+  },
+  "type": "module"
+}
