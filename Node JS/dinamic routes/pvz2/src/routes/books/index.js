@@ -1,4 +1,4 @@
-import express, { response } from 'express'
+import express from 'express'
 import books from '../../db/books.js'
 const router = express.Router()
 
