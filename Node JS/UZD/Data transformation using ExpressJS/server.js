@@ -1,10 +1,14 @@
-import express from 'express'
-import mainRoute from './src/index.js'
-const PORT = 3000
-const app = express()
+import express from "express";
+import cors from "cors";
+import router from "./routes/mainRouter.js";
 
-app.use(mainRoute)
+const PORT = 3000;
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(router);
 
 app.listen(PORT, () => {
-    console.log(`listening on port: ${PORT}`)
-})
+    console.log("app is running on port " + PORT);
+});
