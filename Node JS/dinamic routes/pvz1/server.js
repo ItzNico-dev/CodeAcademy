@@ -6,15 +6,15 @@ const app = express()
 
 //! static
 app.get('/api',(req,res) => {
-    res.send('labas')
+    res.send('babas')
 })
 
-//!dinamic
+//!dynamic
 app.get('/api/:id', (req,res) => {
     res.send(`${req.params.id}`)
 })
 
-//!dinamic
+//!dynamic
 app.get('/api/users/:userId/posts/:postId', (req,res) => {
     res.send(`userId: ${req.params.userId} postId: ${req.params.postId}`)
 })
@@ -23,3 +23,4 @@ app.get('/api/users/:userId/posts/:postId', (req,res) => {
 app.listen(PORT, () => {
     console.log(`server is listening om port: ${PORT}`)
 })
+
