@@ -1,9 +1,10 @@
-import express from 'express'
-import { getAllCategories, getProductsWithCategories, getCategoryValue } from './controllers.js'
-const router = express.Router()
+import express from 'express';
+import { getAllCategories, getAllProductsWithCategories, postTest, getCategoryValue } from './controllers.js';
+const router = express.Router();
 
-router.get('/Categories', getAllCategories)
-router.get('/Products', getProductsWithCategories)
-router.get('/categoryValue', getCategoryValue)
+router.get('/categories', getAllCategories);
+router.get('/products', getAllProductsWithCategories);
+router.get('/categoryvalue', getCategoryValue);
+router.post('/categories', postTest);
 
-export default router
+export default router;

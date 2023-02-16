@@ -1,58 +1,57 @@
-import Categories from "./models/categoryModel.js"
-import Products from "./models/productModel.js"
+import Categories from './models/categoryModel.js';
+import Product from './models/productModel.js';
 
+// 6. Sukurkite dar vieną route GET /categoryvalue/, šis paduos kiekvienos kategorijos produktų kainos sumą, pvz:
 
-export async function getAllCategories(req,res) {
-    try {
-    const categories = await Categories.find({})
-
-    res.json(categories)
-
-    } catch (error) {
-        res.status(500).json({error: error.message})
-    }
-}
-
-
-export async function getProductsWithCategories(req, res) {
-  try {
-    const product = await Products.find({}).populate('category', {}, 'Categories');
-    res.json(product);
-  } catch (error) {
-    res.status(500).json({error: error.message});
-  }
-}
+// {
+//   "phones": 1020, (1020 yra suma visų produktų verčių, kurie yra phones kategorijoje)
+//   "tv":     2000
+// }
 
 export async function getCategoryValue(req, res) {
   try {
-    const categories = await Categories.find();
-    const products = await Products.find().populate("category", "title");
+    const products = await Product.find({}).populate('categoryId', { title: true }, 'categories');
 
-    const sums = {};
-
-    products.forEach((product) => {
-      const categoryId = product.category._id;
-      const categoryTitle = product.category.title;
-      const price = product.price;
-
-      if (sums[categoryId]) {
-        sums[categoryId].total += price;
+    const sums = products.reduce((sumObj, product) => {
+      if (sumObj[product.categoryId.title]) {
+        sumObj[product.categoryId.title] += product.price;
       } else {
-        sums[categoryId] = {
-          title: categoryTitle,
-          total: price
-        };
+        sumObj[product.categoryId.title] = product.price;
       }
-    });
+      return sumObj;
+    }, {});
 
-    const result = [];
-
-    for (const categoryId in sums) {
-      result.push(sums[categoryId]);
-    }
-
-    res.json(result);
+    res.json(sums);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+}
+
+export async function getAllCategories(req, res) {
+  try {
+    const categories = await Categories.find();
+
+    res.json(categories);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
+export async function getAllProductsWithCategories(req, res) {
+  try {
+    const products = await Product.find({}).populate('categoryId', { title: true }, 'categories');
+
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
+export async function postTest(req, res) {
+  const test = await Categories.create({
+    title: 'test',
+    description: 'test description',
+  });
+
+  res.json(test);
 }
