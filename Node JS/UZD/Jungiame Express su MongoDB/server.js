@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 import express from 'express';
 
-const { MongoClient } = require('mongodb');
-
 const PORT = 3000;
 
 const app = express();
