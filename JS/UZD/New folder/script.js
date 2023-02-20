@@ -1,15 +1,71 @@
-//todo 1:
-/*
-Create new function, which would return details about one specific image,
-e.g. id = 5;
-https://picsum.photos/id/{id}/info
-if should be given to function as parameter;
-Some data about image should be added to HTML with JS.
-*/
- 
-//todo 2:
-/*
-Get Chuck Norris joke from https://api.chucknorris.io/jokes/random
-and print the joke itself out in html.
-Do it using async/await, and also with .then notation;
-*/
+//! switch
+
+// const car = 'BMW'
+
+
+// function whatCar(car){
+//     switch(car){
+//     case car = 'VW':
+//         console.log("VW")
+//         break;
+//     case car = 'Audi':
+//         console.log("VW")
+//         break;
+//     case car = 'Bentley':
+//         console.log("VW")
+//         break;
+//     case car = 'Bugatti':
+//         console.log("VW")
+//         break;
+//     case car = 'Lamborghini':
+//         console.log("VW")
+//         break;
+//     case car = 'Porsche':
+//         console.log("VW")
+//         break;
+//     case car = 'Mini':
+//         console.log('BMW')
+//     case car = 'BMW':
+//         console.log('BMW')
+//     case car = 'Rolls-Royce':
+//         console.log('BMW')
+//         break;
+//     default:
+//         console.log('Neither')
+// }
+// }
+
+// whatCar(car)
+
+//! ternary
+
+// const name = 'Matas'
+
+// name.length <=5? console.log('trumpas'): console.log('ilgas')
+
+
+//! cycles
+
+// const name = 'Faded'
+
+// function repeat(name){
+//     for (let i = 0; i < 10; i++) {
+//         console.log(name)
+        
+//     }
+// }
+
+// repeat(name)
+
+//! while
+
+
+function repeat(){
+    const name = 'Faded'
+    const i = 3
+    while (i < 3) {
+    console.log(name)
+}
+}
+
+repeat()
