@@ -4,7 +4,7 @@ const pool = pg.Pool
 
 
 const PORT = 3000
-const connectionString = 'postgres://znlbfwtg:KLVTYRtCCA4UZX7kmD3dh_9sjBgJxsbE@trumpet.db.elephantsql.com/znlbfwtg'
+const connectionString = 'postgres://ugyflcgo:vlWgeatA73ppn6ooIAXch6knwt6Wc3dQ@trumpet.db.elephantsql.com/ugyflcgo'
 
 const PGpool = new pool({
     connectionString
@@ -14,7 +14,7 @@ const app = express()
 
 
 app.get('/people', async (req,res) => {
-    const people = await PGpool.query('select * from people')
+    const people = await PGpool.query('select * from persons')
 
     res.json(people)
 })
