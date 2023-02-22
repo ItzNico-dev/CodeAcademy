@@ -1,11 +1,10 @@
-import express from 'express'
-const router = express.Router();
-import Membership from  '../models/membershipModel'
-import User from '../models/userModel'
+import User from '../models/userModel.js'
+import Service from '../models/serviceModel.js'
+import mongoose from 'mongoose';
 
-async function getAllMemberships(req,res){
+export async function getAllMemberships(req,res){
   try {
-    const memberships = await Membership.find();
+    const memberships = await Service.find();
     res.status(200).json(memberships);
   } catch (err) {
     console.error(err);
@@ -14,9 +13,9 @@ async function getAllMemberships(req,res){
 
 }
 
-async function postNewMembership(req,res){
+export async function postNewMembership(req,res){
     try {
-    const membership = new Membership(req.body);
+    const membership = new Service(req.body);
     await membership.save();
     res.status(201).json(membership);
   } catch (err) {
@@ -25,9 +24,9 @@ async function postNewMembership(req,res){
   }
 }
 
-async function deleteMembershipById(req,res){
+export async function deleteMembershipById(req,res){
     try {
-    const deletedMembership = await Membership.findByIdAndDelete(req.params.id);
+    const deletedMembership = await Service.findByIdAndDelete(req.params.id);
     if (!deletedMembership) {
       return res.status(404).json({ message: 'Membership not found' });
     }
@@ -38,7 +37,7 @@ async function deleteMembershipById(req,res){
   }
 }
 
-async function getUsersByOrder(req,res){
+export async function getUsersByOrder(req,res){
   try {
     const order = req.params.order;
     const users = await User.find().sort({ name: order });
@@ -50,10 +49,22 @@ async function getUsersByOrder(req,res){
 
 }
 
-async function postANewUser(req,res){
+export async function postANewUser(req,res){
   try {
-    const user = new User(req.body);
-    await user.save();
+    const {
+      name,
+      surname,
+      email,
+      service_id
+    } = req.body
+
+    const newUser = {
+      name,
+      surname,
+      email,
+      service_id: mongoose.Types.ObjectId(service_id)
+    }
+    const user = await User.create(newUser)
     res.status(201).json(user);
   } catch (err) {
     console.error(err);
@@ -61,5 +72,3 @@ async function postANewUser(req,res){
   }
 
 }
-
-export default router
