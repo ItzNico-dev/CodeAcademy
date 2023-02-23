@@ -1,25 +1,25 @@
 import express from 'express'
 const router = express.Router()
-import { getAllProducts, getProductById, createNewProducts } from '../controllers/controllers.js'
+import { getAllProducts, getProductById, createNewProducts, updateProductById, deleteProductById } from '../controllers/controllers.js'
 
-// pasiimkime visus produktus
+// get all products
 
 router.get('/products', getAllProducts)
 
-//pasiimti viena produkta pagal id
+//get product by id
 
 router.get('/products/:id', getProductById)
 
-//sukurti nauja produkta
+//create new product
 
 router.post('/products', createNewProducts)
 
-//atnaujinti pagal id
+//update by id
 
-router.put('/products/:id')
+router.put('/products/:id', updateProductById)
 
-// istrinti pagal id
+// delete by id
 
-router.delete('/products/:id')
+router.delete('/products/:id', deleteProductById)
 
 export default router
