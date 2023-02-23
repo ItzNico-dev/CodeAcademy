@@ -48,3 +48,7 @@ export async function deleteProductById(req,res){
         res.status(500).json({error: error.message})
     }
 }
+
+export async function routeNotFound(req,res){
+    res.status(404).json({error: 'Endpoint no go'})
+}
