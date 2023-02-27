@@ -2,7 +2,19 @@ import express from 'express';
 import { getProductsPaginate, getAllProducts, createNewProduct, getProductById, updateProductById, deleteProductById, routeNotFound } from '../controllers/controllers.js';
 const router = express.Router();
 
-router.get('/products/pageination',getProductsPaginate)
+function middlewareTest(req, res, next) {
+    if (!req.query.page || !req.query.size) {
+        res.status(400).json({
+            message: 'Page or size is missing'
+        })
+    } else {
+        next();
+        
+    }
+
+}
+
+router.get('/products/pageination', middlewareTest,getProductsPaginate)
 
 // Pasiimma visus produktus
 router.get('/products', getAllProducts)
