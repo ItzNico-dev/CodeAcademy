@@ -1,5 +1,26 @@
 import DB from '../db/db.js';
 
+// select * from products order by id limit 5 offset 10
+
+export async function getProductsPaginate(req, res){
+  try {
+    const {  size, page } = req.query
+    const products = await DB.query(`select * from products order by id limit ${size} offset ${(page - 1) * size}`)
+    const count = await DB.query('select count(id) from products')
+    const rowCount = count.rows[0].count
+    
+    const resObj = {
+      totalPages: Math.ceil (rowCount / size),
+      data: products.rows
+    }
+    
+    res.json(resObj)
+    
+  } catch (error) {
+    res.status(500).json({error: error.message});
+  }
+}
+
 export async function getAllProducts(req, res) {
   try {
     const products = await DB.query('SELECT id, description, price, title FROM products');
@@ -50,6 +71,7 @@ export async function updateProductById(req, res) {
     res.status(500).json({error: error.message}); 
   }
 }
+
 
 export async function deleteProductById(req, res) {
   try {

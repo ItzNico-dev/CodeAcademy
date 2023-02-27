@@ -1,6 +1,8 @@
 import express from 'express';
-import { getAllProducts, createNewProduct, getProductById, updateProductById, deleteProductById, routeNotFound } from '../controllers/controllers.js';
+import { getProductsPaginate, getAllProducts, createNewProduct, getProductById, updateProductById, deleteProductById, routeNotFound } from '../controllers/controllers.js';
 const router = express.Router();
+
+router.get('/products/pageination',getProductsPaginate)
 
 // Pasiimma visus produktus
 router.get('/products', getAllProducts)
