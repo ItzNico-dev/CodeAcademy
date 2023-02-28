@@ -1,19 +1,35 @@
 import DB from './db.js'
 
 
-export async function getItems(req, res){
-    const items = await DB.query('SELECT id, title FROM public.items limit 2');
-    res.json(items)
+export async function getItems(req, res) {
+  try {
+    const { limit } = req.query;
+    const items = await DB.query(`SELECT id, title FROM items ORDER BY id asc limit ${limit}`);
+
+    res.json(items.rows);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
 
-export async function addItem(req, res){
-    const { title } = req.body
-    const id = await DB.query('INSERT INTO public.items (title, description, price) VALUES ($1, $2, $3) RETURNING id', [title, description, price])
-    res.json({id})
+export async function postItem(req, res) {
+  try {
+    const { title } = req.body;
+    const item = await DB.query(`INSERT INTO items (title) VALUES ('${title}')`);
+
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
 
-export async function removeItemById(req, res){
-    const { id } = req.params
-    await DB.query(`DELETE FROM public.items WHERE id = ${id} `)
-    res.json({id})
+export async function deleteItem(req, res) {
+  try {
+    const { id } = req.params;
+    const item = await DB.query(`DELETE FROM items WHERE id = ${id}`);
+
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }

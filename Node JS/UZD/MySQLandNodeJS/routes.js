@@ -1,9 +1,13 @@
-import express from 'express'
-import { getItems, addItem, removeItemById } from './controllers.js'
-const router = express.Router()
+import express from 'express';
+import { getItems, postItem, deleteItem } from './controllers.js'
+import { checkLimit, checkBody, checkForId } from './middleware.js';
 
-router.get('/items', getItems)
-router.post('/items',addItem)
-router.delete('/items/:id',removeItemById)
+const router = express.Router();
 
-export default router
+router.get('/items', checkLimit, getItems);
+
+router.post('/items', checkBody, postItem);
+
+router.delete('/items/:id', checkForId, deleteItem);
+
+export default router;

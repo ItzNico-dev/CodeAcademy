@@ -1,10 +1,11 @@
 import pg from 'pg';
 import dotenv from 'dotenv';
 dotenv.config();
-const client = process.DATABASE_URL
+
+const { connectionString } = process.env;
 
 const pool = new pg.Pool({
-  connectionString: client
+  connectionString,
 });
 
 export default pool;

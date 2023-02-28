@@ -1,83 +1,83 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
 
-body {
-    margin: 10% 10%;
+// body {
+//     margin: 10% 10%;
 
-}
+// }
 
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: grey;
-    padding: 7%;
+// header {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     background-color: grey;
+//     padding: 7%;
 
-    .logo {
-        height: 150px;
-        width: 150px;
-        background-color: black;
-        margin-bottom: 20px;
-    }
+//     .logo {
+//         height: 150px;
+//         width: 150px;
+//         background-color: black;
+//         margin-bottom: 20px;
+//     }
 
-    a {
-        text-decoration: none;
-        color: purple;
-        font-size: 30px;
-        line-height: 40px;
-    }
-}
+//     a {
+//         text-decoration: none;
+//         color: purple;
+//         font-size: 30px;
+//         line-height: 40px;
+//     }
+// }
 
-main {
-    padding: 7%;
-    background-color: grey;
-    margin: 5%;
+// main {
+//     padding: 7%;
+//     background-color: grey;
+//     margin: 5%;
 
-    tr {
-        text-align: left;
-    }
+//     tr {
+//         text-align: left;
+//     }
 
-    th {
-        text-align: center;
-        border-bottom: 2px solid black;
-    }
+//     th {
+//         text-align: center;
+//         border-bottom: 2px solid black;
+//     }
 
-    td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 2px solid black;
-    }
-}
-@media screen and (min-width: 600px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        height: 200px;
-        padding: 7%;
+//     td {
+//         padding: 10px;
+//         text-align: left;
+//         border-bottom: 2px solid black;
+//     }
+// }
+// @media screen and (min-width: 600px) {
+//     header {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         height: 200px;
+//         padding: 7%;
 
 
-        a {
-            padding-right: 5px;
-            text-align: right;
-            width: 100%;
-        }
-    }
+//         a {
+//             padding-right: 5px;
+//             text-align: right;
+//             width: 100%;
+//         }
+//     }
 
-    main {
-        table {
-            width: 100%;
-        }
+//     main {
+//         table {
+//             width: 100%;
+//         }
 
-        th {
-            text-align: left;
-        }
+//         th {
+//             text-align: left;
+//         }
 
-        td {
-            padding-left: 0;
-        }
-    }
-}
+//         td {
+//             padding-left: 0;
+//         }
+//     }
+// }
