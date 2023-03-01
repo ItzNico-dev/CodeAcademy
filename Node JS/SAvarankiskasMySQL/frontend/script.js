@@ -20,9 +20,13 @@ fetch('http://127.0.0.1:3000/cars')
       img.src = car.image;
       div.appendChild(img);
       const button = document.createElement('button');
-      button.textContent = 'Details';
-      button.addEventListener('click', () => {
-        window.location.href = `/details/${car.id}`;
+      button.textContent = 'delete';
+      button.id = car.id;
+      button.addEventListener('click', (e) => {
+        const id = e.target.id;
+        fetch(`http://127.0.0.1:3000/cars/${id}`,{
+        method: 'delete'
+        });
       });
       div.appendChild(button);
       myContainer.append(div);

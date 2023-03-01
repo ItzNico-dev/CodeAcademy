@@ -25,23 +25,24 @@ export async function getCarsById(req, res) {
 
 export async function postNewCar(req, res) {
   try {
-    const { title, image, price, numberplate } = req.body;
+    const { title, image, price, numberplates } = req.body;
     if (
       title &&
       image &&
       price &&
-      numberplate &&
-      numberplate.length === 6 &&
+      numberplates &&
+      numberplates.length === 6 &&
       typeof title === 'string'
     ) {
       const newCar = await DB.query(
-        `INSERT INTO public.cars (title, image, price, numberplate) VALUES('${title}', '${image}', ${price}, '${numberplate}')`
+        `INSERT INTO public.cars (title, image, price, numberplates) VALUES('${title}', '${image}', ${price}, '${numberplates}')`
       );
       res.json(newCar);
     } else {
       res.status(400).json({ error: 'incorrect data' });
     }
   } catch (error) {
+    console.log(error);
     res.status(500).json({ error: error.message });
   }
 }
@@ -49,8 +50,9 @@ export async function postNewCar(req, res) {
 export async function deleteCarById(req, res) {
   try {
     const { id } = req.params;
-    if (typeof id === 'number') {
-      const deletedCar = await DB.query(`DELETE FROM cars WHERE id=${id}`);
+    const numId = +id
+    if (typeof numId === 'number') {
+      const deletedCar = await DB.query(`DELETE FROM cars WHERE id=${numId}`);
       res.json({ success: true });
     } else {
       res.status(404).json({ error: 'non existing id' });
