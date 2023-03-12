@@ -26,10 +26,25 @@ export async function getAllUsers(req, res) {
     ]);
 
     const placeholderData = await placeholderResponse.json();
-    res.json(placeholderData);
+    res.json([...placeholderData, ...mongoResponse]);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 }
 
-export async function getNameAndId(req, res) {}
+export async function getNameAndId(req, res) {
+  try {
+    const placeholderRequest = await fetch(ENDPOINT);
+    const placeholderData = await placeholderRequest.json();
+    if (!placeholderData.name || !placeholderData.id) {
+      throw new Error('Name or ID is missing from API response');
+    } else {
+      const { name, id } = placeholderData;
+      const response = { name, id };
+      res.json(response);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'An error occurred while fetching data' });
+  }
+}
