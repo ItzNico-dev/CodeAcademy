@@ -20,7 +20,7 @@ export async function getAllUsers(req, res) {
     const mongoRequest = User.find({});
     const placeholderRequest = fetch(ENDPOINT);
 
-    const [mongoResponse, placeholderRe  sponse] = await Promise.all([
+    const [mongoResponse, placeholderResponse] = await Promise.all([
       mongoRequest,
       placeholderRequest,
     ]);
