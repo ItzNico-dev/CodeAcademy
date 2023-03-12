@@ -1,7 +1,10 @@
 import User from '../models/userModel.js';
 
 export async function getUsersNames(req, res) {
-  const users = await User.find({}, { _id: 0, id: 1, name: 1 });
-  const usersData = await users.json();
-  res.json(usersData);
+  try {
+    const users = await User.find({});
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
