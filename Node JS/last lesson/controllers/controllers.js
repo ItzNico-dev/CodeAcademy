@@ -77,11 +77,11 @@ export async function getNameAndId(req, res) {
     ]);
 
     const placeholderUsers = await placeholderResponse.json();
-    const combinedUsers = [...mongoResponse, ...placeholderUsers];
+    const allUsers = [...mongoResponse, ...placeholderUsers];
 
-    const serializedUsers = combinedUsers.map((post) => ({
-      id: post.id,
-      name: post.name,
+    const serializedUsers = allUsers.map((user) => ({
+      id: user.id,
+      name: user.name,
     }));
 
     res.json(serializedUsers);
@@ -101,12 +101,12 @@ export async function getNameEmailAndId(req, res) {
     ]);
 
     const placeholderUsers = await placeholderResponse.json();
-    const combinedUsers = [...mongoResponse, ...placeholderUsers];
+    const allUsers = [...mongoResponse, ...placeholderUsers];
 
-    const serializedUsers = combinedUsers.map((post) => ({
-      id: post.id,
-      name: post.name,
-      email: post.email,
+    const serializedUsers = allUsers.map((user) => ({
+      id: user.id,
+      name: user.name,
+      email: user.email,
     }));
 
     res.json(serializedUsers);
@@ -127,10 +127,10 @@ export async function getNameAddressAndId(req, res) {
 
     const placeholderUsers = await placeholderResponse.json();
 
-    const serializedPlaceholderUsers = placeholderUsers.map((post) => ({
-      id: post.id,
-      name: post.name,
-      address: `${post.address.street} ${post.address.suite}, ${post.address.city}`,
+    const serializedPlaceholderUsers = placeholderUsers.map((user) => ({
+      id: user.id,
+      name: user.name,
+      address: `${user.address.street} ${user.address.suite}, ${user.address.city}`,
     }));
 
     res.json([...mongoResponse, ...serializedPlaceholderUsers]);
