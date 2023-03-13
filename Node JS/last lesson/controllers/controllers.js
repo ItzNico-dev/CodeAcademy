@@ -93,7 +93,7 @@ export async function getNameAndId(req, res) {
 export async function getNameEmailAndId(req, res) {
   try {
     const mongoRequest = User.find({}, { __v: false });
-    const placeholderRequest = fetch(ENDPOINT);
+    const placeholderRequest =  fetch(ENDPOINT);
 
     const [mongoResponse, placeholderResponse] = await Promise.all([
       mongoRequest,
