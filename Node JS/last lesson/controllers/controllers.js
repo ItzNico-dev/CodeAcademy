@@ -7,41 +7,11 @@ const ENDPOINT = process.env.PLACEHOLDER_URL;
 
 export async function createNewUser(req, res) {
   try {
-    const {
-      id,
-      name,
-      username,
-      email,
-      address,
-      street,
-      suite,
-      city,
-      zipcode,
-      lat,
-      lng,
-      phone,
-      website,
-      companyName,
-      catchphrase,
-      bs,
-    } = req.body;
+    const { name, email, address } = req.body;
     const post = await User.create({
-      id,
       name,
-      username,
       email,
       address,
-      street,
-      suite,
-      city,
-      zipcode,
-      lat,
-      lng,
-      phone,
-      website,
-      companyName,
-      catchphrase,
-      bs,
     });
     res.json(post);
   } catch (error) {
