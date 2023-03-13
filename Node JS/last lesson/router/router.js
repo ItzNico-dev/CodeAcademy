@@ -9,7 +9,8 @@ const router = express.Router();
 
 router.get('/users', getAllUsers);
 router.get('/users/names', getNameAndId);
-router.get('/users/body');
+router.get('/users/emails');
+router.get('/users/address',);
 router.post('/users', createNewUser);
 
 export default router;

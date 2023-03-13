@@ -44,13 +44,13 @@ const UserSchema = mongoose.Schema({
     geo: {
       lat: {
         type: String,
-        minLength: 8,
-        maxLength: 10,
+        minLength: 1,
+        maxLength: 20,
       },
       lng: {
         type: String,
-        minLength: 8,
-        maxLength: 10,
+        minLength: 1,
+        maxLength: 20,
       },
     },
   },
@@ -63,11 +63,10 @@ const UserSchema = mongoose.Schema({
     required: true,
   },
   company: {
-    name: {
+    companyName: {
       type: String,
       minLength: 5,
       maxLength: 255,
-      required: true,
     },
     catchPhrase: {
       type: String,
