@@ -84,3 +84,28 @@ const UserSchema = mongoose.Schema({
 const userModel = mongoose.model('users', UserSchema);
 
 export default userModel;
+
+
+// import mongoose from 'mongoose';
+
+// const userSchema = mongoose.Schema({
+//   name: {
+//     type: String,
+//     min: 3,
+//     required: true,
+//   },
+//   email: {
+//     type: String,
+//     min: 11,
+//     required: true,
+//   },
+//   address: {
+//     type: String,
+//     min: 15,
+//     required: true,
+//   },
+// });
+
+// const userModel = mongoose.model('users', userSchema);
+
+// export default userModel;
