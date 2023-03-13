@@ -1,38 +1,35 @@
-.App {
+header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.microsoft-logo{
+  width: 150px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.green-background{
+  background-color: lightgreen;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav{
+  background-color: green;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a{
+  text-decoration: none;
   color: white;
+  padding-left: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.desert-image{
+  width: 100%;
+}
+.about{
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer{
+  background-color: lightgreen;
+  padding: 10px;
 }
