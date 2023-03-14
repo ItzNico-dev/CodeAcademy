@@ -1,0 +1,11 @@
+.navigation{
+    background-color: black;
+    padding: 20px;
+}
+
+.navigation a{
+    color: lightgrey;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: large;
+}

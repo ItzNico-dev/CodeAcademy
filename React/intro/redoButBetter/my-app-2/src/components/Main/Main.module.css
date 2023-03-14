@@ -1,0 +1,12 @@
+.windows-image{
+    width: 100%;
+}
+.main{
+    background-color: lightgrey;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+    padding: 15px 0;
+}

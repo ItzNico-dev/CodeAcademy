@@ -1,0 +1,10 @@
+.navigation{
+    background-color: green;
+    text-align: center;
+    padding: 10px 0;
+}
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+}

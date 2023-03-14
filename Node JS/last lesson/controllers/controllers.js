@@ -21,7 +21,10 @@ export async function createNewUser(req, res) {
 
 export async function getAllUsers(req, res) {
   try {
-    const mongoRequest = User.find({});
+    const mongoRequest = User.find(
+      {},
+      { _id: true, name: true, email: true, address: true }
+    );
     const placeholderRequest = fetch(ENDPOINT);
 
     const [mongoResponse, placeholderResponse] = await Promise.all([
@@ -29,8 +32,18 @@ export async function getAllUsers(req, res) {
       placeholderRequest,
     ]);
 
-    const placeholderData = await placeholderResponse.json();
-    res.json([...placeholderData, ...mongoResponse]);
+    const placeholderUsers = await placeholderResponse.json();
+    const allUsers = [...mongoResponse, ...placeholderUsers];
+
+    const serializedUsers = allUsers.map((user) => ({
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      address: user.address,
+    }));
+
+    res.json(serializedUsers);
+    
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
