@@ -3,6 +3,8 @@ import styles from './Main.module.css';
 import Container from '../Container/Container.jsx';
 import DivContentBox from '../DivContentBox/DivContentBox';
 import FlexDiv from '../FlexDiv/FlexDiv.jsx';
+import BigContainerCard from '../BigContainerCard/BigContainerCard';
+import LowerNavCard from '../LowerNavCard/LowerNavCard.jsx';
 
 export default function () {
   return (
@@ -27,6 +29,13 @@ export default function () {
             mainText='xrtcygvuhbijnokobivyuctxdfcygvuhbijnokmpl'
           />
         </FlexDiv>
+        <BigContainerCard>
+          <DivContentBox titleText='Content' />
+          <DivContentBox titleText='Sub Header' />
+          <DivContentBox titleText='Navigation'>
+            <LowerNavCard />
+          </DivContentBox>
+        </BigContainerCard>
       </Container>
     </div>
   );
