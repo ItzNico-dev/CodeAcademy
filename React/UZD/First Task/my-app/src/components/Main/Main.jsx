@@ -18,20 +18,30 @@ export default function () {
         <FlexDiv>
           <DivContentBox
             titleText='About'
-            mainText='xrtcygvuhbijnokobivyuctxdfcygvuhbijnokmpl'
+            mainText='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ratione porro eum temporibus illo, ex quidem illum itaque distinctio quisquam quo. Alias ducimus corrupti asperiores blanditiis sapiente est ea maxime.'
           />
           <DivContentBox
             titleText='Company'
-            mainText='xrtcygvuhbijnokobivyuctxdfcygvuhbijnokmpl'
+            mainText='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ratione porro eum temporibus illo, ex quidem illum itaque distinctio quisquam quo. Alias ducimus corrupti asperiores blanditiis sapiente est ea maxime.'
           />
           <DivContentBox
             titleText='Services'
-            mainText='xrtcygvuhbijnokobivyuctxdfcygvuhbijnokmpl'
+            mainText='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ratione porro eum temporibus illo, ex quidem illum itaque distinctio quisquam quo. Alias ducimus corrupti asperiores blanditiis sapiente est ea maxime.'
           />
         </FlexDiv>
         <BigContainerCard>
-          <DivContentBox titleText='Content' />
-          <DivContentBox titleText='Sub Header' />
+          <DivContentBox
+            titleText='Content'
+            mainText={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque sed ipsam cupiditate corporis provident perspiciatis quisquam harum exercitationem odio eos incidunt, reiciendis vero amet porro unde at, iusto ullam.'
+            }
+          />
+          <DivContentBox
+            titleText='Sub Header'
+            mainText={
+              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos atque sed ipsam cupiditate corporis provident perspiciatis quisquam harum exercitationem odio eos incidunt, reiciendis vero amet porro unde at, iusto ullam.'
+            }
+          />
           <DivContentBox titleText='Navigation'>
             <LowerNavCard />
           </DivContentBox>

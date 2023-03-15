@@ -3,7 +3,7 @@ import styles from './LowerNavCard.module.css';
 
 export default function LowerNavCard() {
   return (
-    <div>
+    <div className={styles.flex}>
       <a href='#'>Home</a>
       <a href='#'>Product</a>
       <a href='#'>Company</a>
