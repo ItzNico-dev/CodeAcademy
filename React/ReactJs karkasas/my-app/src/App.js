@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import MathButton from './components/MathButton/MathButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MathButton
+        text='Show 5 + 6 answer'
+        action={(a, b) => a + b}
+        array={[5, 6]}
+        // array={[1, 2, 'asd']}
+        // textOrNumber={2}
+        // person={{ name: 'Matt', age: 21 }}
+        // header = {123}
+      />
+      <MathButton
+        text='Show 10 - 6 answer'
+        action={(a, b) => a - b}
+        array={[10, 6]}
+      />
     </div>
   );
 }
