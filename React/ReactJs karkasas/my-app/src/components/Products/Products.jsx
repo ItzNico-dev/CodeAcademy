@@ -1,4 +1,5 @@
 import React from 'react';
+import Product from '../Product/Product.jsx';
 
 export default function Products() {
   const products = [
@@ -37,7 +38,7 @@ export default function Products() {
     <div>
       {products.map((product) => {
         return (
-          <Products
+          <Product
             key={product.id}
             category={product.category}
             name={product.name}

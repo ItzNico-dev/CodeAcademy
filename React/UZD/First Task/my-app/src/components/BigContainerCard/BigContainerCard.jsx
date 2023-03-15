@@ -5,5 +5,11 @@ import DivContentBox from '../DivContentBox/DivContentBox.jsx';
 export default function BigContainerCard(props) {
   const { children } = props;
 
-  return <div className={styles.container}>{children}</div>;
+  return (
+    <div className={styles.container}>
+      {children.map((child) => {
+        return (child.className = { child });
+      })}
+    </div>
+  );
 }
