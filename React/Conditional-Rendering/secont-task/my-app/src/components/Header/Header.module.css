@@ -1,0 +1,11 @@
+.header{
+    background-color: lightblue;
+    height: 100px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1200px){
+    .header{
+        height: 150px;
+    }
+}
