@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Content.module.css';
+import style from './Content.module.css';
 
 export default function Content() {
-  return <div className={styles.content}></div>;
+  return <div className={style.content}>Content</div>;
 }

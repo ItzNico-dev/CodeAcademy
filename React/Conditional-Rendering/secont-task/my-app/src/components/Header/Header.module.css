@@ -1,11 +1,11 @@
-.header{
-    background-color: lightblue;
-    height: 100px;
-    text-align: center;
+.header {
+  background-color: rgb(175, 175, 244);
+  height: 100px;
+  text-align: center;
 }
 
-@media screen and (min-width: 1200px){
-    .header{
-        height: 150px;
-    }
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 150px;
+  }
 }
