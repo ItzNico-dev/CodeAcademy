@@ -1,7 +1,44 @@
+import React, { useState } from 'react';
 import './App.css';
+import AddTaskForm from './components/AddTaskForm/AddTaskForm';
+import Header from './components/Header/Header';
+import TaskList from './components/TaskList/TaskList';
 
 function App() {
-  return <div></div>;
+  const [tasks, setTasks] = useState([
+    {
+      text: 'First Task',
+      isFinished: true,
+    },
+    {
+      text: 'Second Task',
+      isFinished: false,
+    },
+  ]);
+
+  function handleAddTask(task) {
+    const newTasks = JSON.parse(JSON.stringify(tasks));
+    newTasks.push({
+      text: task,
+      isFinished: false,
+    });
+    setTasks(newTasks);
+  }
+
+  function handleCheckbox(index) {
+    const newTasks = JSON.parse(JSON.stringify(tasks));
+    newTasks[index].isFinished = !newTasks[index].isFinished;
+
+    setTasks(newTasks);
+  }
+
+  return (
+    <div>
+      <Header />
+      <TaskList tasks={tasks} handleCheckbox={handleCheckbox} />
+      <AddTaskForm handleAdd={handleAddTask} />
+    </div>
+  );
 }
 
 export default App;
