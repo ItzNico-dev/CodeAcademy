@@ -1,11 +1,10 @@
 import './App.css';
-import HooksTesting from './components/HooksTesting';
-
+import Posts from './components/Posts/Posts';
 
 function App() {
   return (
     <div>
-      <HooksTesting />
+      <Posts />
     </div>
   );
 }
