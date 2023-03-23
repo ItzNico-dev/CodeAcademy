@@ -1,9 +1,26 @@
 import User from '../../db/UserModel.js';
 
-export function signIn(req, res) {
-  res.json({
-    hello: 'Hello world, signIn',
-  });
+export async function signIn(req, res) {
+  try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne(
+      { email: email, password: password },
+      { id: true }
+    );
+
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json({ message: 'invalid email or password' });
+    }
+
+    res.json({
+      hello: 'Hello world, signIn',
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
 
 export async function signUp(req, res) {
