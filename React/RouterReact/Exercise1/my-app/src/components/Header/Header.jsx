@@ -1,0 +1,16 @@
+import React from 'react';
+import styles from './Header.module.css';
+import PreviousWork from '../PreviousWork/PreviousWork';
+import Navigation from '../Navigation/Navigation'
+
+export default function Header() {
+  return (
+    <div>
+      <img
+        className={styles.logo}
+        src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAZlBMVEX///8BAQEAAAD39/e6urrX19exsbGBgYHb29v7+/tbW1vf39/09PTBwcE9PT3o6OjR0dFEREQzMzNTU1PIyMgYGBiSkpJ4eHhMTEwcHBxoaGinp6cnJyeMjIyZmZnu7u4ODg5wcHB8TL45AAAERklEQVRoge2a55riIBSG9aSZ3kw3xfu/yaWFELsD+Gf5ntlnEmTySjmFkz0cjIyMjIyMjIyMjH4vPz1hpf4voVbmtR1gdW2T/QptuQlhHo9H8jt3rV9g7YIymTC5sLVT51KEcnY568We4SEW/Zx1YuNHWDbbGsHOEyolO7qwc/Uci8CVrjXuX2ERuNeDtdksc/rNBYAWc7KS18NF4ESHA7HfYRFYx4CDD7iBemy6fMBdUuXc+D0WgWPl3PEj7qic+8Z4GVe9CZcfcUvl3PyZu9hd5Bq5r8arkfsgFPIWSHRxYZUA3Ro0jLelD24n1x48zsVAb7DdCX0twB8r5xI3CS67y1iQgCRjLcR9a3CUHk6ivO3+QjgXsQPq4d3/oaQmPKVCKuMRrsDBSRBMyrk2Hq9wNOjxEov+ycdc9YEww+MV7gu8kaDYcQGyu7+TVbif55mdUyLe4uAOoXLujAe4ud+acbcFLfHwNaSUAV7gno3vvOZ4a7oe4fXWkW+QAIxmskZTefLI4pKdBd4JNbDh1xq44XbyBIJt0gZ2jlPH8iJdmQ9mkC46RB1sDejiqgN7mDsxEBGX4e1aOk0HlTTZ4hAAWtbDSbiHXH0yyeS7LVnaLeLR6Ij3WOtqrXPEbLJpxPNbdtepT2Bvwavl9t449utO03rapwqEkL9e6vAXUWzvzPL+4AD7Y0Jox9FBVmlACkUCOSqojyDpK70sBE6Iy0wQSO7ttGMrKET8K1QIt5AqzoL+VaK/cJhXq+TAw1qXEyKNAyil6UoA/NMhB01MmWq+rNtukOK6fOs0QiMaVNKgEAHQIFfiuNtHDd907v3DvtCc8weJKYy3jAiKvlQ9LmIqZ/OvmUturZnn6524q9ND6k3W5KW+uI5htXaW95kD98DFuyiHtvLaV251sRpurrC89krnBY4PdsPftEUc7KCC5+RzAByrIAMQqzjYYLvh0YaJhsv+mCjrObk9CoNubpPk7Hp3NoWLZA5wV17AXjBxt6fOtOp/20u24BDmIGpFdw11nE7TCa2bcukML3Kba+3aMTr1BgVLJQmjdVO3ZDkefcsQoJOwbbt109hqC5WzU6+Tuktf8dTXjnzweyE/GwvuDNn8HovxJy+Rhr3JKHBO74WWe6ETLYCrxtY6yee64G/KdvkV3lW1ntwuG8o9qR3CoV03OP0W5aDu3G17TV3XQbWHdiM10HC8sd8qQL0bTzqdHm98Bnl8H2/2acX9/kMqyYJwKJyI2IPz6Tamp1O++pOtn5zDcvcWA931oaX62bUDIQ4KFba/aRDDIFyG51EmxaFQqAjLGfV5m2aA6bVTsibxmCppVS3fMcn7FQuTdcTSBdKMH/8+6t6vNiX9cpQG/o9fWASgqC5LdhYUnwZUqwA1oYKU/76oO5I6poJ30D5K2pJv3F6MUoOrgnDsn07fZS3W6fTT/8ViZGRkZGRkZGT0H+ofGk4rpq698VYAAAAASUVORK5CYII='
+        alt='LOGO'
+      />
+    </div>
+  );
+}
