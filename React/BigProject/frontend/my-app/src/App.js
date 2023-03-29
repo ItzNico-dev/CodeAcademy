@@ -25,15 +25,17 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<MainLayout />} />
-        <Route path="/auth">
-          <Route path="signin" element={<SignInLayout />} />
-          <Route path="signup" element={<RegistrationLayout />} />
+        <Route path='/' element={<MainLayout />} />
+        <Route path='/auth'>
+          <Route path='signin' element={<SignInLayout />} />
+          <Route path='signup' element={<RegistrationLayout />} />
         </Route>
-        <Route path="*" element={<Page404 />} />
+        <Route path='*' element={<Page404 />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+

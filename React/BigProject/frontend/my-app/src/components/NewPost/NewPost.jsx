@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createNewPost } from '../../api-calls/posts';
 
-export default function NewPost() {
+export default function NewPost({}) {
   const [postBody, setPostBody] = useState('');
 
   async function submitHandler(e) {
