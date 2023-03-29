@@ -19,8 +19,7 @@ export async function signInRequest(body) {
   try {
     const { email, password } = body;
 
-    const res = await axios.post(HOST + './signin' + { email, password });
-
+    const res = await axios.post(HOST + '/signin', { email, password });
     return res.data._id;
   } catch (error) {
     return false;

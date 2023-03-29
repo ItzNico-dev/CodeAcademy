@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const HOST = 'http://localhost:4000/api/post';
+const HOST = 'http://localhost:4000/api/posts';
 
-export async function createNewPost(req, res) {
+export async function createNewPost({ body, userId }) {
   try {
-    await axios.post(HOST, '/post', { maxBodyLength, userId });
-  console.log()
-} catch (error) {}
+    const res = await axios.post(HOST + '/post', { body, userId });
+    console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
 }

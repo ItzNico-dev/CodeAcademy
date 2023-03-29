@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { signInRequest } from '../../../api-calls/auth';
 
-export default function SigninLayout(e) {
+export default function SignInLayout() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isWrongCredentials, setIsWrongCredentials] = useState('');
+  const [isWrongCredential, setIsWrongCredentials] = useState(null);
 
-  async function submitHandler() {
-    await signInRequest();
+  async function submitHandler(e) {
+    e.preventDefault();
     const userId = await signInRequest({ email, password });
     if (userId) {
       localStorage.setItem('loggedInUser', userId);
@@ -21,21 +21,19 @@ export default function SigninLayout(e) {
       <label htmlFor='email'>Email</label>
       <input
         type='email'
-        name='email'
         id='email'
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
-      <label htmlFor='password'>Password</label>
+      <label htmlFor='password'>Password </label>
       <input
         type='password'
-        name='password'
         id='password'
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
-      <button>Sign In</button>
-      <h3 style={{ display: isWrongCredentials ? 'block' : 'none' }}>
+      <button type='submit'>Log In</button>
+      <h3 style={{ display: isWrongCredential ? 'block' : 'none' }}>
         Wrong password or email
       </h3>
     </form>

@@ -1,5 +1,5 @@
 import React from 'react';
-import SignOutButton from '../../SignOutButton/SignOutButton';
+import SignOutButton from '../SignOutButton/SignOutButton';
 import styles from './MainHeader.module.css';
 
 export default function MainHeader() {
@@ -10,7 +10,7 @@ export default function MainHeader() {
         <a href=''>My Posts</a>
       </nav>
 
-      <SignOutButton className={styles.button}></SignOutButton>
+      <SignOutButton className={styles.button} />
     </header>
   );
 }

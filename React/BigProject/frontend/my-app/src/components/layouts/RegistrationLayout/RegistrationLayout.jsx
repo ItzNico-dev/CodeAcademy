@@ -32,12 +32,13 @@ export default function RegistrationLayout() {
 
     if (signupResponse) {
       setFirstName('');
+      setLastName('');
       setEmail('');
-      setPassword('');
       setDateOfBirth('');
+      setPassword('');
     }
 
-    setIsRegistrationSuccessful(await signUpRequest(body));
+    setIsRegistrationSuccessful(signupResponse);
   }
   return (
     <form onSubmit={submitHandler}>

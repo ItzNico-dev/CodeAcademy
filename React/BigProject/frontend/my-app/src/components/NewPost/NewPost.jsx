@@ -4,22 +4,26 @@ import { createNewPost } from '../../api-calls/posts';
 export default function NewPost() {
   const [postBody, setPostBody] = useState('');
 
-  function submitHandler(e) {
+  async function submitHandler(e) {
     e.preventDefault();
-    createNewPost({
+    console.log(localStorage.getItem('loggedInUser'));
+    await createNewPost({
       body: postBody,
       userId: localStorage.getItem('loggedInUser'),
     });
+    setPostBody('');
   }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <label htmlFor='body'>Post</label>
       <input
         type='text'
         id='body'
+        value={postBody}
         onChange={(e) => setPostBody(e.target.value)}
       />
+      <button type='submit'>Post</button>
     </form>
   );
 }

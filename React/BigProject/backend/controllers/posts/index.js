@@ -4,17 +4,24 @@ import mongoose from 'mongoose';
 export async function createNewPost(req, res) {
   try {
     const { body, userId } = req.body;
+    console.log(userId);
 
-    const newPost = {
-      body,
-      userId: new mongoose.Types.ObjectId(userId),
-    };
+    if (userId && body) {
+      const newPost = {
+        body,
+        userId: new mongoose.Types.ObjectId(userId),
+      };
 
-    const post = await PostModel.create(newPost);
+      const post = await PostModel.create(newPost);
 
-    res.json(newPost);
+      res.json(post);
+    } else {
+      res.status(400).json({
+        message: `Invalid user ID or body: userId - ${userId} body - ${body}`,
+      });
+    }
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json(error.message);
   }
 }
 
@@ -22,10 +29,11 @@ export async function deletePostById(req, res) {
   try {
     const { id } = req.params;
 
-    const DBres = await PostModel.findByIdAndDelete(id);
+    const deleteRes = await PostModel.findOneAndDelete(id);
 
-    res.json(DBres);
+    res.json(deleteRes);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.log(error);
+    res.status(500).json(error.message);
   }
 }

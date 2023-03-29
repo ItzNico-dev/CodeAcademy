@@ -1,15 +1,15 @@
 import './App.css';
+import MainLayout from './components/layouts/MainLayout/MainLayout';
 import RegistrationLayout from './components/layouts/RegistrationLayout/RegistrationLayout';
+import SignInLayout from './components/layouts/SignInLayout/SignInLayout';
 import SignOutButton from './components/SignOutButton/SignOutButton';
-import SignInLayout from './components/layouts/SigninLayout/SigninLayout';
-import { Routes, Route } from 'react-router-dom';
-
 
 function App() {
   return (
     <div>
-      <SignOutButton />
-      <SignInLayout />
+      <MainLayout />
+      {/* <SignOutButton />
+      <SignInLayout /> */}
       {/* <RegistrationLayout /> */}
     </div>
   );
