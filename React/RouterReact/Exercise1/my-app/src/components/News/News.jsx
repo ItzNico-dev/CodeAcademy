@@ -1,19 +1,20 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function News() {
-  const NEWS_ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
+  const NEW_ENDPOINT = 'https://jsonplaceholder.typicode.com/posts';
   const [news, setNews] = useState([]);
 
   useEffect(() => {
     axios
-      .get(NEWS_ENDPOINT)
+      .get(NEW_ENDPOINT)
       .then((res) => {
         setNews(res.data);
       })
       .catch((err) => console.log(err.message));
   }, []);
+
   return (
     <div>
       {news.map((item) => {

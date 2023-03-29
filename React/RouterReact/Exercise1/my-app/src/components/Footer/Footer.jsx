@@ -1,14 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
   const location = useLocation();
+  console.log(location);
   return (
-    <div>
+    <footer>
       <Navigation />
-      <p>All rights reserved © </p>
-      <p>current page {location.pathname}</p>
-    </div>
+      <p>All rights reserver ©</p>
+      <p>Current Page {location.pathname}</p>
+    </footer>
   );
 }
