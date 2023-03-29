@@ -6,8 +6,8 @@ export default function MainHeader() {
   return (
     <header className={styles.header}>
       <nav>
-        <a href=''>New Post</a>
-        <a href=''>My Posts</a>
+        <a href="">New Post</a>
+        <a href="">My Posts</a>
       </nav>
 
       <SignOutButton className={styles.button} />

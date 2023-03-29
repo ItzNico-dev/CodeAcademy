@@ -16,9 +16,9 @@ export async function createNewPost(req, res) {
 
       res.json(post);
     } else {
-      res.status(400).json({
-        message: `Invalid user ID or body: userId - ${userId} body - ${body}`,
-      });
+      res
+        .status(400)
+        .json({ message: `Invalid user ID or body: userId - ${userId} body - ${body}` });
     }
   } catch (error) {
     res.status(500).json(error.message);

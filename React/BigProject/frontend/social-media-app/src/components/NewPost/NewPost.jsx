@@ -7,23 +7,15 @@ export default function NewPost() {
   async function submitHandler(e) {
     e.preventDefault();
     console.log(localStorage.getItem('loggedInUser'));
-    await createNewPost({
-      body: postBody,
-      userId: localStorage.getItem('loggedInUser'),
-    });
+    await createNewPost({ body: postBody, userId: localStorage.getItem('loggedInUser') });
     setPostBody('');
   }
 
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor='body'>Post</label>
-      <input
-        type='text'
-        id='body'
-        value={postBody}
-        onChange={(e) => setPostBody(e.target.value)}
-      />
-      <button type='submit'>Post</button>
+      <label htmlFor="body">Post</label>
+      <input type="text" id="body" value={postBody} onChange={(e) => setPostBody(e.target.value)} />
+      <button type="submit">Post</button>
     </form>
   );
 }
