@@ -4,7 +4,10 @@ export async function signIn(req, res) {
   try {
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email: email, password: password }, { id: true });
+    const user = await User.findOne(
+      { email: email, password: password },
+      { id: true }
+    );
 
     if (user) {
       res.json(user);

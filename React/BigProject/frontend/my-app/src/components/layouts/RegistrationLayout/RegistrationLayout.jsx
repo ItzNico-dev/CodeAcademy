@@ -8,7 +8,8 @@ export default function RegistrationLayout() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
-  const [isRegistrationSuccessful, setIsRegistrationSuccessful] = useState(null);
+  const [isRegistrationSuccessful, setIsRegistrationSuccessful] =
+    useState(null);
 
   const navigate = useNavigate();
 
@@ -44,44 +45,49 @@ export default function RegistrationLayout() {
   }
   return (
     <form onSubmit={submitHandler}>
-      <label htmlFor="firstName">First Name</label>
+      <label htmlFor='firstName'>First Name</label>
       <input
-        type="text"
-        id="firstName"
+        type='text'
+        id='firstName'
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
       />
       <br />
-      <label htmlFor="lastName">Last Name</label>
+      <label htmlFor='lastName'>Last Name</label>
       <input
-        type="text"
-        id="lastName"
+        type='text'
+        id='lastName'
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
       />
       <br />
-      <label htmlFor="email">Email</label>
-      <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <br />
-      <label htmlFor="password">Password</label>
+      <label htmlFor='email'>Email</label>
       <input
-        type="password"
-        id="password"
+        type='email'
+        id='email'
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <br />
+      <label htmlFor='password'>Password</label>
+      <input
+        type='password'
+        id='password'
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
-      <label htmlFor="dateOfBirth">Date Of Birth</label>
+      <label htmlFor='dateOfBirth'>Date Of Birth</label>
       <input
-        type="date"
-        id="dateOfBirth"
+        type='date'
+        id='dateOfBirth'
         value={dateOfBirth}
         onChange={(e) => setDateOfBirth(e.target.value)}
       />
       <br />
-      <button type="submit">Register</button>
+      <button type='submit'>Register</button>
       <br />
-      <Link to="/auth/signin">SignIn Instead</Link>
+      <Link to='/auth/signin'>SignIn Instead</Link>
       {registrationUpdateHeading()}
     </form>
   );
