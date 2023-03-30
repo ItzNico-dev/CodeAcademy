@@ -16,7 +16,7 @@ export default function ItemList() {
           setIsLoading(false);
         })
         .catch((error) => console.log(error));
-    }, 100);
+    }, 1000);
   }, []);
 
   function handleDelete(index) {
