@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDom, { createPortal } from 'react-dom';
 
 const modalStyle = {
   position: 'fixed',
@@ -7,13 +7,11 @@ const modalStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   zIndex: 1000,
-  backgroundColor: 'black',
-  color: 'red',
 };
 
 const backgroundStyles = {
   position: 'fixed',
-  backgroundColor: 'rgba(0,0,0,0.5)',
+  backgroundColor: 'rgba(0,0,0, 0.5)',
   top: 0,
   bottom: 0,
   left: 0,
@@ -21,17 +19,17 @@ const backgroundStyles = {
   zIndex: 1000,
 };
 
-export default function Modal({ open, closeModal }) {
-  if (!open) {
+export default function Modal({ children, isOpen, close }) {
+  if (!isOpen) {
     return null;
   }
 
   return ReactDom.createPortal(
     <>
-      <div style={backgroundStyles}></div>
+      <div onClick={close} style={backgroundStyles}></div>
       <div style={modalStyle}>
-        <h3>this is our modal</h3>
-        <button onClick={closeModal}>Close</button>
+        <button onClick={close}>Close</button>
+        {children}
       </div>
     </>,
 
