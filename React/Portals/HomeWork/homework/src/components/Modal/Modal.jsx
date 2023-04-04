@@ -7,13 +7,13 @@ const modalStyle = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   zIndex: 1000,
-  backgroundColor: 'black',
-  color: 'red',
+  backgroundColor: 'red',
+  padding: '1rem 3rem',
 };
 
 const backgroundStyles = {
   position: 'fixed',
-  backgroundColor: 'rgba(0,0,0,0.5)',
+  backgroundColor: 'rgba(0,0,0, 0.5)',
   top: 0,
   bottom: 0,
   left: 0,
@@ -30,12 +30,10 @@ export default function Modal({ open, closeModal }) {
     <>
       <div style={backgroundStyles}></div>
       <div style={modalStyle}>
-        <h3>this is our modal</h3>
-        <button onClick={closeModal}>Close</button>
-
+        <h1>Modal</h1>
+        <button onClick={closeModal}>close</button>
       </div>
     </>,
-
     document.getElementById('modal')
   );
 }
