@@ -8,7 +8,7 @@ export default function ChatBox() {
         type='checkbox'
         id='checkbox'
         checked={true}
-        onChange={(e) => console.log(e.target.value.checked)}
+        onChange={(e) => console.log(e.target.checked)}
       />
     </div>
   );

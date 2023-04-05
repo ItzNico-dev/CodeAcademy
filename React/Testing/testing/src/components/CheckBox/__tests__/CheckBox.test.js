@@ -6,7 +6,7 @@ describe('CheckBox', () => {
     render(
       <CheckBox label='checkbox' id={8} checked={true} onChange={() => {}} />
     );
-    const label = await screen.findByText('checkbox');
+    const label = await screen.findByText('Checkbox');
     const checkbox = await screen.findByRole('checkbox');
 
     expect(label).toBeInTheDocument();
