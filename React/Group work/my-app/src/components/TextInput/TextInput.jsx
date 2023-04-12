@@ -1,18 +1,13 @@
 import React from 'react';
 
-export default function TextInput({ value, type, placeholder, updateState }) {
+export default function TextInput({ value, type, placeholder, changeCurrent }) {
   function inputHandler(event) {
-    updateState(event.target.value);
+    changeCurrent(event.target.value);
   }
 
   return (
     <div>
-      <input
-        value={value}
-        updateState={inputHandler}
-        type={type}
-        placeholder={placeholder}
-      />
+      <input value={value} type={type} placeholder={placeholder} />
     </div>
   );
 }

@@ -11,25 +11,25 @@ export default function ContactForm() {
 
   function onsubmitHandler(e) {
     e.preventDefault();
-    if (name.length < 6 || username.length < 6) {
-      alert('Name and username must be at least 6 characters long');
-      return;
-    }
-    console.log(name, username, email);
+    return;
   }
 
   return (
     <form onSubmit={onsubmitHandler}>
       <Label name='Name' />
-      <TextInput updateState={setName} type='text' placeholder='Some Text' />
+      <TextInput changeCurrent={setName} type='text' placeholder='Some Text' />
       <Label name='Username' />
       <TextInput
-        updateState={setUsername}
+        changeCurrent={setUsername}
         type='text'
         placeholder='Some Text'
       />
       <Label name='Email' />
-      <TextInput updateState={setEmail} type='email' placeholder='Some Text' />
+      <TextInput
+        changeCurrent={setEmail}
+        type='email'
+        placeholder='Some Text'
+      />
       <Label name='Subject' />
       <select>
         <option value='option1'>Option 1</option>
@@ -48,20 +48,7 @@ export default function ContactForm() {
   );
 }
 
-ContactForm.propTypes = {
-  name: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-  }),
-  username: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-  }),
-  email: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-  }),
-};
+
 ContactForm.defaultProps = {
   name: '',
   username: '',
