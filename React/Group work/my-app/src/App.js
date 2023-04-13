@@ -1,5 +1,4 @@
-import './App.css';
-import ContactForm from './components/ContactForm/ContactForm.jsx';
+import ContactForm from './components/UI/organisms/ContactForm/ContactForm';
 
 function App() {
   return (
