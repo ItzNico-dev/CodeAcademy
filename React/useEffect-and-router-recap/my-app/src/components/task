@@ -1,0 +1,15 @@
+
+Use a public news API, such as NewsAPI (https://newsapi.org/), to fetch news articles for different categories (e.g., technology, sports, entertainment, etc.).
+
+
+Create a navigation bar with links to different news categories. Use React Router to set up routes for each category.
+
+
+Create a Category component that will display a list of articles for the selected category. The component should use the useEffect hook to fetch the articles for the given category whenever the category changes.
+
+
+Create an Article component that will display the article's title, image, description, and a link to read the full article on its original source.
+Use CSS or styled-components
+
+
+(Optional) Add pagination or infinite scrolling to load more articles as the user scrolls down.
