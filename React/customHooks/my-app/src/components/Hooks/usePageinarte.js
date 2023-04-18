@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
 
-export default function usePageinate() {
-  const [pageInateData, setPageInateData] = useState([]);
+export default function usePaginate(arr, itemsPerPage) {
+  const [paginatedData, setPaginatedData] = useState([]);
 
   useEffect(() => {
     const pageCount = Math.ceil(arr.length / itemsPerPage);
-    const pageInated = [];
-
+    const paginated = [];
     for (let i = 0; i < pageCount; i++) {
       const start = itemsPerPage * i;
-      pageInated.push(arr.slice(start, start + itemsPerPage));
+      paginated.push(arr.slice(start, start + itemsPerPage));
     }
-  });
+
+    setPaginatedData(paginated);
+  }, [arr, itemsPerPage]);
+
+  return paginatedData;
 }

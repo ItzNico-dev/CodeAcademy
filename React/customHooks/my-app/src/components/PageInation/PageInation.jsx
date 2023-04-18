@@ -1,19 +1,25 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import usePageinate from '../Hooks/usePageinarte';
+import axios from 'axios';
+import usePaginate from '../../hooks/usePaginate';
+import React, { useEffect, useState } from 'react';
 
-// export default function PageInation() {
-//   const [posts, setPosts] = useState([]);
-//   const [pageInated, setPageInated] = useState([]);
+export default function Pagination() {
+  const [posts, setPosts] = useState([]);
 
-//   useEffect(() => {
-//     axios
-//       .get('https://jsonplaceholder.typicode.com/posts')
-//       .then((res) => {
-//         setPosts(res.data);
-//       })
-//       .catch((error) => console.log(error));
-//   });
+  useEffect(() => {
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => {
+        setPosts(response.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
-//   return <div></div>;
-// }
+  const paginated = usePaginate(posts, 5);
+  console.log(paginated);
+
+  return (
+    <div>
+      <pre>{JSON.stringify(paginated)}</pre>
+    </div>
+  );
+}

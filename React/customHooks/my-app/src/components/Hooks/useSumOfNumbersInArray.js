@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function useSumOfNumbersInArray(array) {
   const [sum, setSum] = useState(0);
@@ -8,4 +8,6 @@ export default function useSumOfNumbersInArray(array) {
     const totalSum = filtered.reduce((a, b) => a + b, 0);
     setSum(totalSum);
   }, [array]);
+
+  return sum;
 }
