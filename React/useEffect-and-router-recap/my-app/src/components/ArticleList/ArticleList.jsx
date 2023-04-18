@@ -12,7 +12,6 @@ export default function ArticleList({ category }) {
       )
       .then((res) => {
         setArticles(res.data.articles);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -21,9 +20,9 @@ export default function ArticleList({ category }) {
 
   return (
     <div>
-      {articles.map((article) => {
-        return <Article  />;
-      })}
+      {articles.map(() => (
+        <Article />
+      ))}
     </div>
   );
 }
