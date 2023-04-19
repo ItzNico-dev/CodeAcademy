@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation/Navigation';
-import ArticleList from './components/Navigation/ArticleList/ArticleList';
+import ArticleList from './components/ArticleList/ArticleList';
 
 function App() {
   return (

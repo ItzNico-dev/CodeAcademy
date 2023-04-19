@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import Article from '../../Article/Article';
+import Article from '../Article/Article';
 
 export default function ArticleList() {
   const [articles, setArticles] = useState([]);
@@ -44,6 +44,10 @@ export default function ArticleList() {
       })
       .catch((error) => console.log(error));
   }, [category, page]);
+
+  useEffect(() => {
+    setArticles([]);
+  }, [category]);
 
   return (
     <div>
