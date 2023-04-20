@@ -9,8 +9,20 @@ export default function Posts() {
 
   return (
     <div>
-      <button onClick={dispatch(fetchPosts(5))}>5 posts</button>
-      <button onClick={dispatch(fetchPosts(10))}>10 posts</button>
+      <button
+        onClick={() => {
+          dispatch(fetchPosts(5));
+        }}
+      >
+        5 posts
+      </button>
+      <button
+        onClick={() => {
+          dispatch(fetchPosts(10));
+        }}
+      >
+        10 posts
+      </button>
       {loading && <h1>Loading...</h1>}
       {error && <p>Error: {error}</p>}
       <ul>

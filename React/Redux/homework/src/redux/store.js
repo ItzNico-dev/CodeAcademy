@@ -3,7 +3,7 @@ import postsReducer from './reducers/postsReducer';
 
 const store = configureStore({
   reducer: {
-    users: postsReducer,
+    posts: postsReducer,
   },
 });
 
