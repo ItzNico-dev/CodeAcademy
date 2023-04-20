@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Article from '../Article/Article';
 
@@ -10,6 +10,7 @@ export default function ArticleList() {
   const [loading, setLoading] = useState(false);
 
   const observerRef = useRef();
+  const location = useLocation;
 
   const lastArticleRef = (element) => {
     observerRef.current = new IntersectionObserver((entries) => {
@@ -48,6 +49,10 @@ export default function ArticleList() {
   useEffect(() => {
     setArticles([]);
   }, [category]);
+
+  useEffect(() => {
+    setArticles([]);
+  }, [location]);
 
   return (
     <div>
