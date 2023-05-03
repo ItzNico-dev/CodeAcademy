@@ -4,10 +4,14 @@ import jwtDecode from 'jwt-decode';
 import { Routes, Route, Link } from 'react-router-dom';
 import Form from './components/Form/Form';
 import Home from './components/Home/Home';
+import { LoginContext } from './contexts/loginContext.js';
+import Main from './components/Main/Main';
 
 function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [permissions, setPermissions] = useState([]);
+  const [token, setToken] = useState('');
 
   async function handleRegister(e) {
     e.preventDefault();
@@ -29,7 +33,8 @@ function App() {
         email,
         password,
       });
-      localStorage.setItem('jwtToken', response.data.token);
+      setPermissions(response.data.permissions);
+      setToken(response.data.token);
     } catch (error) {
       console.log(error.message);
     }
@@ -58,33 +63,35 @@ function App() {
           <Link to={'/register'}>Register</Link>
         </li>
       </ul>
-      <Routes>
-        <Route path='/' element={<Home isLoggedIn={isLoggedIn} />} />
-        <Route
-          path='/login'
-          element={
-            <Form
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              action={handleLogin}
-            />
-          }
-        />
-        <Route
-          path='/register'
-          element={
-            <Form
-              email={email}
-              setEmail={setEmail}
-              password={password}
-              setPassword={setPassword}
-              action={handleRegister}
-            />
-          }
-        />
-      </Routes>
+      <LoginContext.Provider value={{ permissions, token }}>
+        <Routes>
+          <Route path='/' element={<Home isLoggedIn={isLoggedIn} />} />
+          <Route
+            path='/login'
+            element={
+              <Form
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                action={handleLogin}
+              />
+            }
+          />
+          <Route
+            path='/register'
+            element={
+              <Form
+                email={email}
+                setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
+                action={handleRegister}
+              />
+            }
+          />
+        </Routes>
+      </LoginContext.Provider>
     </div>
   );
 }
