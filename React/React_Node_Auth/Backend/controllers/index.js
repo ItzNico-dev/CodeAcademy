@@ -54,7 +54,7 @@ export async function addPermissions(req, res) {
 
     const user = await User.findById(id);
     user.permissions = permissions;
-    user.save();
+    await user.save();
 
     res.status(200).json({ message: 'Permissions added successfully' });
   } catch (error) {
@@ -68,9 +68,11 @@ export async function writeStuff(req, res) {
     const id = req.userId;
     const user = await User.findById(id);
     if (user.permissions.includes('write')) {
-      res.status(200).json({ message: 'added stuff in the database' });
+      res.status(200).json({ message: 'added stuff to the database' });
     } else {
-      res.status(403).json({ message: 'You do not have permission to write' });
+      res
+        .status(403)
+        .json({ error: 'User does not have permissions to write' });
     }
   } catch (error) {
     res.status(500).json({ message: 'Internal Server Error' });

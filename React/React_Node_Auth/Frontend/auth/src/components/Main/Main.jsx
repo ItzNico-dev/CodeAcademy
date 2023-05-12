@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { LoginContext } from '../../contexts/loginContext';
 import axios from 'axios';
+import React, { useContext } from 'react';
+import { LoginContext } from '../../contexts/LoginContext';
 
 export default function Main() {
   const { permissions, token } = useContext(LoginContext);
@@ -14,13 +14,13 @@ export default function Main() {
     } catch (error) {
       console.log(error.message);
     }
-
-    return (
-      <div>
-        {permissions.includes('read') && (
-          <button onClick={postSomething}>Send</button>
-        )}
-      </div>
-    );
   }
+
+  return (
+    <div>
+      {permissions.includes('write') && (
+        <button onClick={postSomething}>Send</button>
+      )}
+    </div>
+  );
 }

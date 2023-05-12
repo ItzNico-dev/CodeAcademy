@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Routes, Route, Link } from 'react-router-dom';
+import { LoginContext } from './contexts/LoginContext';
 import Form from './components/Form/Form';
 import Home from './components/Home/Home';
-import { LoginContext } from './contexts/loginContext.js';
 import Main from './components/Main/Main';
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
       });
       setPermissions(response.data.permissions);
       setToken(response.data.token);
+      // localStorage.setItem('jwtToken', response.data.token);
     } catch (error) {
       console.log(error.message);
     }
@@ -91,6 +92,7 @@ function App() {
             }
           />
         </Routes>
+        <Main />
       </LoginContext.Provider>
     </div>
   );
